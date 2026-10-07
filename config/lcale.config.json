@@ -1,4 +1,8 @@
 {
+  "brand_id": "lcale_perfume_03",
+  "brand_name": "L'Cale Perfume",
+  "logo_url": "assets/brand_3/logos/logo3.png",
+  "favicon_url": "",
   "theme_name": "Yellow Honey",
   "theme": {
     "primary_color": "#F3D37A",
@@ -8,6 +12,11 @@
     "bg_color": "#FFFCF5",
     "text_color": "#423616",
     "footer_color": "#E6C15A"
+  },
+  "contact": {
+    "phone": "0900000000",
+    "email": "hello@lcale.vn",
+    "address": "Số 1, Đường Cô Bắc, Quận 1, TP. HCM"
   },
   "category_colors": [
     "#F3D37A",
