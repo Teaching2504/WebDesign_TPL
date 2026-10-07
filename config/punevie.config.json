@@ -1,0 +1,17 @@
+{
+  "theme_name": "Pink Pastel",
+  "theme": {
+    "primary_color": "#F3B6C8",
+    "secondary_color": "#FDE8EF",
+      "third_color": "#EC8EAC",
+    "accent_color": "#D65A84",
+    "bg_color": "#FFF8FA",
+    "text_color": "#4A1E2D",
+    "footer_color": "#E58BA8"
+  },
+  "category_colors": [
+    "#F3B6C8",
+    "#FDA7DF",
+    "#E84393"
+  ]
+}

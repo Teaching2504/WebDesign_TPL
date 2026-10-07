@@ -1,39 +1,127 @@
 {
   "brand_id": "tpl_beauty_01",
   "brand_name": "TPL - The Pretty Life",
-  "logo_url": "./assets/logos/tpl-logo.png",
+  "logo_url": "assets/brand_1/logos/logo1.png",
   "favicon_url": "./assets/logos/favicon.ico",
   "theme": {
-    "primary_color": "#9CCCE8",
-    "secondary_color": "#C7E8F5",
-    "accent_color": "#6FAED1",
-    "bg_color": "#F7FCFF",
-    "text_color": "#2F4F63",
-    "font_family": "'Playfair Display', Georgia, serif"
+    "primary_color": "#A8DDF2",
+    "secondary_color": "#E6F5FC",
+    "third_color": "#91dbf8",
+    "accent_color": "#6BAECF",
+    "bg_color": "#F8FCFE",
+    "text_color": "#234457",
+    "footer_color": "#84bae9",
+    "font_family": "system-ui, -apple-system, sans-serif"
   },
   "contact": {
     "phone": "0783741057",
     "email": "tplbeauty@gmail.com",
-    "address": "123 Nguyễn Huệ, Quận 1, TP. Hồ Chí Minh"
+    "address": "Số 254 Trần Đình Xu, Phường Cầu Ông Lãnh, TP. HCM"
   },
   "features": {
-    "enable_quiz": true,
+    "enable_about": true,
     "enable_before_after": true,
-    "enable_dark_mode": false
+    "enable_dark_mode": true
   },
-  "categories": {
-    "skincare_makeup": {
-      "name": "Beauty",
-      "color": "#F3B6C8"
-    },
-    "perfume": {
-      "name": "Fragrance",
-      "color": "#F3D37A"
-    },
-    "haircare": {
-      "name": "Hair Care",
-      "color": "#9CCCE8"
-    }
+  "vi": {
+    "nav_home": "Trang chủ",
+    "nav_about": "Giới thiệu",
+    "nav_products": "Sản phẩm",
+    "nav_before_after": "Hiệu quả",
+    "nav_contact": "Liên hệ",
+    "btn_consult": "Tư vấn chọn dầu gội",
+    "hero_badge": "100% Tinh dầu Bưởi & Bồ kết thiên nhiên",
+    "hero_title": "Nuôi dưỡng mái tóc suôn mượt & chắc khỏe từ gốc đến ngọn",
+    "hero_desc": "Giải pháp chuyên sâu cho mái tóc khô xơ, gãy rụng và nuôi dưỡng da đầu sạch sâu bồng bềnh chuẩn Salon.",
+    "btn_explore": "Xem các dòng dầu gội",
+    "btn_learn_more": "Khám phá câu chuyện",
+    "story_badge": "Ký Ức & Nguồn Cội",
+    "story_title": "Kế thừa bí quyết dưỡng tóc cổ truyền từ bàn tay mẹ",
+    "story_desc": "Từ thuở xưa bên mái hiên nhà, mùi bồ kết nướng trên than hồng cùng vỏ bưởi, củ sả đã nuôi dưỡng mái tóc đen mượt óng ả của phụ nữ Việt. TPL kế thừa trọn vẹn tinh hoa mộc mạc ấy, kết hợp công nghệ chiết xuất hiện đại để mang đến giải pháp chăm sóc tóc dịu lành, thuần khiết.",
+    "story_stat1_num": "100%",
+    "story_stat1_label": "Thảo mộc tự nhiên",
+    "story_stat2_num": "0%",
+    "story_stat2_label": "Silicon & Paraben",
+    "story_stat3_num": "72h",
+    "story_stat3_label": "Lưu hương dịu ngọt",
+    "section_categories": "Dòng Sản Phẩm Nổi Bật",
+    "section_categories_sub": "Chăm sóc toàn diện từ da đầu, ngọn tóc cho tới hương thơm quyến rũ",
+    "section_before_after": "Hiệu Quả Phục Hồi Sau 14 Ngày",
+    "section_ba_sub": "Minh chứng thực tế từ khách hàng trải nghiệm liệu trình TPL",
+    "ba_tag_before": "Trước khi dùng",
+    "ba_desc_before": "Tóc khô xơ, chẻ ngọn, da đầu bết dầu và gãy rụng khi chải.",
+    "ba_tag_after": "Sau 14 ngày",
+    "ba_desc_after": "Tóc tơi bồng óng ả, chân tóc chắc khỏe, giảm gãy rụng tới 85%.",
+    "categories": [
+      {
+        "name": "Dầu Gội Phục Hồi",
+        "color": "#A8DDF2",
+        "image": "assets/brand_1/images/pro1.jpg",
+        "desc": "Chiết xuất tinh dầu bưởi làm sạch sâu da đầu và ngăn rụng tóc."
+      },
+      {
+        "name": "Dầu Xả Cấp Ẩm",
+        "color": "#94D2ED",
+        "image": "assets/brand_1/images/pro2.jpg",
+        "desc": "Bổ sung Keratin và Vitamin E giúp thân tóc suôn mượt óng ả."
+      },
+      {
+        "name": "Serum Kích Mọc Tóc",
+        "color": "#7EBFDF",
+        "image": "assets/brand_1/images/pro3.jpg",
+        "desc": "Tinh chất đậm đặc nuôi dưỡng nang tóc phát triển dày khỏe."
+      }
+    ]
+  },
+  "en": {
+    "nav_home": "Home",
+    "nav_about": "Our Story",
+    "nav_products": "Products",
+    "nav_before_after": "Proven Results",
+    "nav_contact": "Contact",
+    "btn_consult": "Consult Haircare",
+    "hero_badge": "100% Natural Pomelo & Herbal Essence",
+    "hero_title": "Nourish radiant, healthy & silky hair from root to tip",
+    "hero_desc": "Intensive solutions for damaged hair, split-ends and scalp wellness crafted for salon quality.",
+    "btn_explore": "Shop Shampoos",
+    "btn_learn_more": "Discover Our Story",
+    "story_badge": "Heritage & Origins",
+    "story_title": "Preserving traditional herbal hair secrets from ancient times",
+    "story_desc": "From ancient Vietnamese tradition, sun-dried pomelo peel, roasted soapberry, and lemongrass have nurtured luxurious silky hair for generations. TPL preserves this authentic botanical heritage with modern extraction technology to deliver pure, gentle care.",
+    "story_stat1_num": "100%",
+    "story_stat1_label": "Natural Botanicals",
+    "story_stat2_num": "0%",
+    "story_stat2_label": "Silicon & Paraben",
+    "story_stat3_num": "72h",
+    "story_stat3_label": "Delicate Scent",
+    "section_categories": "Featured Collections",
+    "section_categories_sub": "Comprehensive wellness care from scalp to healthy split ends",
+    "section_before_after": "Visible Results After 14 Days",
+    "section_ba_sub": "Real feedback from clients who transformed their hair with TPL",
+    "ba_tag_before": "Before use",
+    "ba_desc_before": "Dry, frizzy, split ends and severe hair loss while brushing.",
+    "ba_tag_after": "After 14 days",
+    "ba_desc_after": "Silky, bouncy volume, strong roots and 85% reduced breakage.",
+    "categories": [
+      {
+        "name": "Hair Repair Shampoo",
+        "color": "#A8DDF2",
+        "image": "assets/brand_1/images/pro1.jpg",
+        "desc": "Pomelo essential oil deeply cleanses the scalp and helps reduce hair loss."
+      },
+      {
+        "name": "Moisturizing Conditioner",
+        "color": "#94D2ED",
+        "image": "assets/brand_1/images/pro2.jpg",
+        "desc": "Enriched with Keratin and Vitamin E to leave hair smooth, soft and silky."
+      },
+      {
+        "name": "Hair Growth Serum",
+        "color": "#7EBFDF",
+        "image": "assets/brand_1/images/pro3.jpg",
+        "desc": "A concentrated formula that nourishes hair follicles for thicker, healthier hair."
+      }
+    ]
   },
   "default_language": "vi"
 }

@@ -1,0 +1,17 @@
+{
+  "theme_name": "Yellow Honey",
+  "theme": {
+    "primary_color": "#F3D37A",
+    "secondary_color": "#FEF7E3",
+    "third_color": "#E8C45A",
+    "accent_color": "#D4A936",
+    "bg_color": "#FFFCF5",
+    "text_color": "#423616",
+    "footer_color": "#E6C15A"
+  },
+  "category_colors": [
+    "#F3D37A",
+    "#F9DF8E",
+    "#E5BE50"
+  ]
+}
