@@ -2,7 +2,7 @@
   "brand_id": "tpl_beauty_01",
   "brand_name": "TPL - The Pretty Life",
   "logo_url": "assets/brand_1/logos/logo1.png",
-  "favicon_url": "./assets/logos/favicon.ico",
+  "favicon_url": "",
   "theme": {
     "primary_color": "#A8DDF2",
     "secondary_color": "#E6F5FC",
@@ -12,6 +12,12 @@
     "text_color": "#234457",
     "footer_color": "#84bae9",
     "font_family": "system-ui, -apple-system, sans-serif"
+  },
+  "hero": {
+    "background_image": "assets/brand_1/logos/logonav.png",
+    "hero_image": "assets/brand_1/images/producs.png",
+    "background_opacity": 1,
+    "background_blur": "0px"
   },
   "contact": {
     "phone": "0783741057",
@@ -30,14 +36,15 @@
     "nav_before_after": "Hiệu quả",
     "nav_contact": "Liên hệ",
     "btn_consult": "Tư vấn chọn dầu gội",
-    "hero_badge": "100% Tinh dầu Bưởi & Bồ kết thiên nhiên",
+    "hero_badge": "90% sản phẩm làm từ thiên nhiên",
     "hero_title": "Nuôi dưỡng mái tóc suôn mượt & chắc khỏe từ gốc đến ngọn",
     "hero_desc": "Giải pháp chuyên sâu cho mái tóc khô xơ, gãy rụng và nuôi dưỡng da đầu sạch sâu bồng bềnh chuẩn Salon.",
     "btn_explore": "Xem các dòng dầu gội",
     "btn_learn_more": "Khám phá câu chuyện",
+    "product_info": "Thông tin sản phẩm",
     "story_badge": "Ký Ức & Nguồn Cội",
     "story_title": "Kế thừa bí quyết dưỡng tóc cổ truyền từ bàn tay mẹ",
-    "story_desc": "Từ thuở xưa bên mái hiên nhà, mùi bồ kết nướng trên than hồng cùng vỏ bưởi, củ sả đã nuôi dưỡng mái tóc đen mượt óng ả của phụ nữ Việt. TPL kế thừa trọn vẹn tinh hoa mộc mạc ấy, kết hợp công nghệ chiết xuất hiện đại để mang đến giải pháp chăm sóc tóc dịu lành, thuần khiết.",
+    "story_desc": "Từ thuở xưa bên mái hiên nhà, những nguyên liệu quen thuộc như bồ kết, vỏ bưởi và củ sả đã trở thành một phần ký ức thân thuộc trong hành trình chăm sóc mái tóc của người phụ nữ Việt. Mùi bồ kết nướng trên than hồng, hương vỏ bưởi dịu nhẹ hòa cùng những nhánh sả tươi đã nuôi dưỡng mái tóc đen mượt, óng ả qua nhiều thế hệ. TPL - The Pretty Life lấy cảm hứng từ những ký ức mộc mạc ấy, gìn giữ tinh hoa chăm sóc tóc từ thiên nhiên và kết hợp cùng công nghệ chiết xuất hiện đại để tạo nên những sản phẩm dịu lành, phù hợp với nhu cầu chăm sóc tóc hiện đại. Mỗi sản phẩm TPL không chỉ là một giải pháp chăm sóc tóc mà còn là câu chuyện về sự yêu thương, nâng niu và trân trọng vẻ đẹp tự nhiên.",
     "story_stat1_num": "100%",
     "story_stat1_label": "Thảo mộc tự nhiên",
     "story_stat2_num": "0%",
@@ -57,19 +64,43 @@
         "name": "Dầu Gội Phục Hồi",
         "color": "#A8DDF2",
         "image": "assets/brand_1/images/pro1.jpg",
-        "desc": "Chiết xuất tinh dầu bưởi làm sạch sâu da đầu và ngăn rụng tóc."
+        "desc": "Chiết xuất tinh dầu bưởi làm sạch sâu da đầu và ngăn rụng tóc.",
+        "detail": "Công thức kết hợp tinh dầu bưởi, bồ kết và các chiết xuất thảo mộc tự nhiên, giúp làm sạch nhẹ nhàng da đầu, hỗ trợ giảm tình trạng tóc gãy rụng và mang lại cảm giác tóc chắc khỏe, mềm mượt hơn. Hương bưởi dịu nhẹ giúp mái tóc lưu lại cảm giác tươi mát sau khi gội."
       },
       {
         "name": "Dầu Xả Cấp Ẩm",
         "color": "#94D2ED",
         "image": "assets/brand_1/images/pro2.jpg",
-        "desc": "Bổ sung Keratin và Vitamin E giúp thân tóc suôn mượt óng ả."
+        "desc": "Bổ sung Keratin và Vitamin E giúp thân tóc suôn mượt óng ả.",
+        "detail": "Kết hợp Keratin, Vitamin E cùng các thành phần dưỡng ẩm giúp bổ sung độ mềm mại cho thân tóc, hỗ trợ cải thiện tình trạng tóc khô xơ và rối. Công thức giúp tóc dễ chải, suôn mượt và giữ được vẻ óng ả tự nhiên sau mỗi lần sử dụng."
       },
       {
         "name": "Serum Kích Mọc Tóc",
         "color": "#7EBFDF",
         "image": "assets/brand_1/images/pro3.jpg",
-        "desc": "Tinh chất đậm đặc nuôi dưỡng nang tóc phát triển dày khỏe."
+        "desc": "Tinh chất đậm đặc nuôi dưỡng nang tóc phát triển dày khỏe.",
+        "detail": "Tinh chất cô đặc kết hợp chiết xuất bưởi, bồ kết và các thành phần thảo mộc tự nhiên, tập trung chăm sóc vùng chân tóc và da đầu. Sản phẩm hỗ trợ nuôi dưỡng tóc, giúp mái tóc trông dày khỏe, mềm mượt và giảm cảm giác khô xơ ở phần chân tóc."
+      },
+      {
+        "name": "Serum Tóc Bạc Hà & Bồ Kết",
+        "color": "#6FB6D8",
+        "image": "assets/brand_1/images/pro4.jpg",
+        "desc": "Tinh chất bạc hà & bồ kết giúp chăm sóc chân tóc, hỗ trợ phục hồi tóc hư tổn.",
+        "detail": "Serum tóc kết hợp bạc hà và bồ kết, giúp chăm sóc da đầu và chân tóc, hỗ trợ phục hồi mái tóc khô xơ, hư tổn. Công thức nhẹ nhàng mang lại cảm giác tươi mát, giúp tóc mềm mượt và chắc khỏe hơn."
+      },
+      {
+        "name": "Dầu Gội Bạc Hà & Bồ Kết",
+        "color": "#82C5E5",
+        "image": "assets/brand_1/images/pro5.jpg",
+        "desc": "Làm sạch da đầu, giảm gãy rụng và giúp mái tóc mềm mượt tự nhiên.",
+        "detail": "Công thức kết hợp bạc hà và bồ kết giúp làm sạch nhẹ nhàng da đầu, loại bỏ dầu thừa và bụi bẩn. Sản phẩm hỗ trợ giảm gãy rụng, mang lại cảm giác sạch thoáng và giúp mái tóc mềm mượt hơn sau mỗi lần gội."
+      },
+      {
+        "name": "Dầu Xả Bạc Hà & Bồ Kết",
+        "color": "#9BD5EE",
+        "image": "assets/brand_1/images/pro6.jpg",
+        "desc": "Dưỡng tóc mềm mượt, giảm gãy rụng và chăm sóc tóc khô xơ.",
+        "detail": "Dầu xả kết hợp bạc hà và bồ kết giúp cung cấp độ ẩm cho thân tóc, hỗ trợ cải thiện tình trạng tóc khô xơ và dễ rối. Công thức giúp tóc mềm mượt, dễ chải và giảm cảm giác xơ rối sau khi sử dụng."
       }
     ]
   },
@@ -85,9 +116,10 @@
     "hero_desc": "Intensive solutions for damaged hair, split-ends and scalp wellness crafted for salon quality.",
     "btn_explore": "Shop Shampoos",
     "btn_learn_more": "Discover Our Story",
+    "product_info": "Product Information",
     "story_badge": "Heritage & Origins",
     "story_title": "Preserving traditional herbal hair secrets from ancient times",
-    "story_desc": "From ancient Vietnamese tradition, sun-dried pomelo peel, roasted soapberry, and lemongrass have nurtured luxurious silky hair for generations. TPL preserves this authentic botanical heritage with modern extraction technology to deliver pure, gentle care.",
+    "story_desc": "From generations ago, familiar ingredients such as soapberry, pomelo peel and lemongrass became a cherished part of traditional Vietnamese haircare. The warm scent of roasted soapberry, the refreshing aroma of pomelo peel and the gentle fragrance of lemongrass have long been associated with naturally smooth, healthy-looking hair. Inspired by these simple memories, TPL - The Pretty Life preserves the essence of traditional botanical haircare while combining it with modern extraction technology to create gentle solutions for today's lifestyle. Each TPL product is more than a haircare solution; it carries a story of love, care and appreciation for natural beauty.",
     "story_stat1_num": "100%",
     "story_stat1_label": "Natural Botanicals",
     "story_stat2_num": "0%",
@@ -107,19 +139,43 @@
         "name": "Hair Repair Shampoo",
         "color": "#A8DDF2",
         "image": "assets/brand_1/images/pro1.jpg",
-        "desc": "Pomelo essential oil deeply cleanses the scalp and helps reduce hair loss."
+        "desc": "Pomelo essential oil deeply cleanses the scalp and helps reduce hair loss.",
+        "detail": "Formulated with pomelo essential oil, soapberry and natural botanical extracts to gently cleanse the scalp, support healthier-looking hair and help reduce the appearance of breakage. Its delicate pomelo scent leaves the hair feeling fresh and refreshed after washing."
       },
       {
         "name": "Moisturizing Conditioner",
         "color": "#94D2ED",
         "image": "assets/brand_1/images/pro2.jpg",
-        "desc": "Enriched with Keratin and Vitamin E to leave hair smooth, soft and silky."
+        "desc": "Enriched with Keratin and Vitamin E to leave hair smooth, soft and silky.",
+        "detail": "Enriched with Keratin, Vitamin E and moisturizing ingredients to help soften dry, tangled hair and improve manageability. The nourishing formula leaves the hair smoother, softer and naturally glossy after each use."
       },
       {
         "name": "Hair Growth Serum",
         "color": "#7EBFDF",
         "image": "assets/brand_1/images/pro3.jpg",
-        "desc": "A concentrated formula that nourishes hair follicles for thicker, healthier hair."
+        "desc": "A concentrated formula that nourishes hair follicles for thicker, healthier hair.",
+        "detail": "A concentrated botanical formula featuring pomelo, soapberry and natural herbal extracts to care for the scalp and hair roots. It helps nourish the hair, supports a fuller and healthier-looking appearance, and leaves the roots feeling refreshed and cared for."
+      },
+      {
+        "name": "Mint & Soapberry Hair Serum",
+        "color": "#6FB6D8",
+        "image": "assets/brand_1/images/pro4.jpg",
+        "desc": "Mint and soapberry serum that nourishes the roots and helps restore damaged hair.",
+        "detail": "A lightweight hair serum combining mint and soapberry extracts to care for the scalp and hair roots. It helps support damaged, dry hair while providing a refreshing sensation and leaving hair softer and healthier-looking."
+      },
+      {
+        "name": "Mint & Soapberry Shampoo",
+        "color": "#82C5E5",
+        "image": "assets/brand_1/images/pro5.jpg",
+        "desc": "Gently cleanses the scalp, helps reduce breakage and leaves hair naturally smooth.",
+        "detail": "Formulated with mint and soapberry extracts to gently cleanse the scalp and remove excess oil and impurities. The formula helps reduce the appearance of breakage while leaving the scalp feeling fresh and the hair soft and smooth."
+      },
+      {
+        "name": "Mint & Soapberry Conditioner",
+        "color": "#9BD5EE",
+        "image": "assets/brand_1/images/pro6.jpg",
+        "desc": "Nourishes dry hair, helps reduce breakage and leaves hair soft and smooth.",
+        "detail": "A nourishing conditioner combining mint and soapberry extracts to provide moisture and improve the feel of dry, tangled hair. It helps make hair softer, smoother and easier to comb after each use."
       }
     ]
   },

@@ -1,112 +1,112 @@
-:root { 
-    --primary-color: #A8DDF2; 
-    --secondary-color: #E6F5FC; 
-    --third-color: #91dbf8; 
-    --accent-color: #6BAECF; 
-    --bg-color: #F8FCFE; 
-    --bg-surface: #ffffff; 
-    --text-color: #234457; 
-    --text-muted: #648496; 
-    --border-color: rgba(168, 221, 242, 0.35); 
-    --footer-color: #84bae9; 
-    --font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
-    --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
-    --radius-sm: 10px; 
-    --radius-md: 18px; 
-    --radius-lg: 28px; 
-    --shadow-soft: 0 10px 30px rgba(107, 174, 207, 0.08); 
-    --shadow-card: 0 12px 32px rgba(35, 68, 87, 0.04); 
-} 
+:root {
+    --primary-color: #A8DDF2;
+    --secondary-color: #E6F5FC;
+    --third-color: #91dbf8;
+    --accent-color: #6BAECF;
+    --bg-color: #F8FCFE;
+    --bg-surface: #ffffff;
+    --text-color: #234457;
+    --text-muted: #648496;
+    --border-color: rgba(168, 221, 242, 0.35);
+    --footer-color: #84bae9;
+    --font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --radius-sm: 10px;
+    --radius-md: 18px;
+    --radius-lg: 28px;
+    --shadow-soft: 0 10px 30px rgba(107, 174, 207, 0.08);
+    --shadow-card: 0 12px 32px rgba(35, 68, 87, 0.04);
+}
 
-[data-theme="dark"] { 
-    --bg-color: #0b1319 !important; 
-    --bg-surface: #14222c !important; 
-    --text-color: #ffffff !important; 
-    --text-muted: #94a3b8 !important; 
-    --border-color: rgba(255, 255, 255, 0.1) !important; 
-    --secondary-color: #1c3342 !important; 
-    --shadow-card: 0 14px 35px rgba(0, 0, 0, 0.5) !important; 
-} 
+[data-theme="dark"] {
+    --bg-color: #1c6daa !important;
+    --bg-surface: #1c4b6c !important;
+    --text-color: #bcd7ff !important;
+    --text-muted: #e5ecf5 !important;
+    --border-color: rgba(255, 255, 255, 0.1) !important;
+    --secondary-color: #1c3342 !important;
+    --shadow-card: 0 14px 35px rgba(0, 0, 0, 0.5) !important;
+}
 
-[data-theme="dark"] body { 
-    background-color: var(--bg-color) !important; 
-    color: var(--text-color) !important; 
-} 
+[data-theme="dark"] body {
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+}
 
-[data-theme="dark"] h1, 
-[data-theme="dark"] h2, 
-[data-theme="dark"] h3, 
-[data-theme="dark"] h4, 
-[data-theme="dark"] .logo-text, 
-[data-theme="dark"] .nav-link, 
-[data-theme="dark"] .hero-title, 
-[data-theme="dark"] .story-title, 
-[data-theme="dark"] .section-title, 
-[data-theme="dark"] .cat-title { 
-    color: var(--text-color) !important; 
-    -webkit-text-fill-color: var(--text-color) !important; 
-} 
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] .logo-text,
+[data-theme="dark"] .nav-link,
+[data-theme="dark"] .hero-title,
+[data-theme="dark"] .story-title,
+[data-theme="dark"] .section-title,
+[data-theme="dark"] .cat-title {
+    color: var(--text-color) !important;
+    -webkit-text-fill-color: var(--text-color) !important;
+}
 
-[data-theme="dark"] p, 
-[data-theme="dark"] .hero-desc, 
-[data-theme="dark"] .story-desc, 
-[data-theme="dark"] .cat-desc, 
-[data-theme="dark"] .section-subtitle, 
-[data-theme="dark"] .footer-col p, 
-[data-theme="dark"] .footer-bottom p { 
-    color: var(--text-muted) !important; 
-} 
+[data-theme="dark"] p,
+[data-theme="dark"] .hero-desc,
+[data-theme="dark"] .story-desc,
+[data-theme="dark"] .cat-desc,
+[data-theme="dark"] .section-subtitle,
+[data-theme="dark"] .footer-col p,
+[data-theme="dark"] .footer-bottom p {
+    color: var(--text-muted) !important;
+}
 
-[data-theme="dark"] .hero-badge, 
-[data-theme="dark"] .story-badge { 
-    background-color: var(--secondary-color) !important; 
-    color: var(--accent-color) !important; 
-    border-color: var(--border-color) !important; 
-} 
+[data-theme="dark"] .hero-badge,
+[data-theme="dark"] .story-badge {
+    background-color: var(--secondary-color) !important;
+    color: var(--accent-color) !important;
+    border-color: var(--border-color) !important;
+}
 
-[data-theme="dark"] .floating-tag { 
-    background: var(--bg-surface) !important; 
-    color: var(--text-color) !important; 
-    border: 1px solid var(--border-color) !important; 
-} 
+[data-theme="dark"] .floating-tag {
+    background: var(--bg-surface) !important;
+    color: var(--text-color) !important;
+    border: 1px solid var(--border-color) !important;
+}
 
-[data-theme="dark"] .stat-num { 
-    color: var(--accent-color) !important; 
-} 
+[data-theme="dark"] .stat-num {
+    color: var(--accent-color) !important;
+}
 
-[data-theme="dark"] .stat-text { 
-    color: var(--text-muted) !important; 
-} 
+[data-theme="dark"] .stat-text {
+    color: var(--text-muted) !important;
+}
 
-[data-theme="dark"] .header { 
-    background-color: var(--primary-color) !important; 
-    border-bottom-color: var(--border-color) !important; 
-} 
+[data-theme="dark"] .header {
+    background-color: var(--primary-color) !important;
+    border-bottom-color: var(--border-color) !important;
+}
 
-[data-theme="dark"] .footer { 
-    background-color: var(--footer-color) !important; 
-    border-top-color: var(--border-color) !important; 
-} 
+[data-theme="dark"] .footer {
+    background-color: var(--footer-color) !important;
+    border-top-color: var(--border-color) !important;
+}
 
-[data-theme="dark"] .category-card, 
-[data-theme="dark"] .story-card, 
-[data-theme="dark"] .ba-card { 
-    background-color: var(--bg-surface) !important; 
-    border-color: var(--border-color) !important; 
-} 
+[data-theme="dark"] .category-card,
+[data-theme="dark"] .story-card,
+[data-theme="dark"] .ba-card {
+    background-color: var(--bg-surface) !important;
+    border-color: var(--border-color) !important;
+}
 
-[data-theme="dark"] .btn-outline { 
-    border-color: var(--accent-color) !important; 
-    color: var(--text-color) !important; 
-} 
+[data-theme="dark"] .btn-outline {
+    border-color: var(--accent-color) !important;
+    color: var(--text-color) !important;
+}
 
-[data-theme="dark"] .btn-outline:hover { 
-    background-color: var(--secondary-color) !important; 
-} 
+[data-theme="dark"] .btn-outline:hover {
+    background-color: var(--secondary-color) !important;
+}
 
-* { 
-    box-sizing: border-box; 
-} 
+* {
+    box-sizing: border-box;
+}
 
 body {
     background-color: var(--bg-color);
@@ -162,6 +162,40 @@ h3,
     background: var(--text-color);
     padding: 2px;
     border-radius: 8px;
+}
+
+.hero-section {
+    position: relative;
+    overflow: hidden;
+    padding: 5rem 0 4rem;
+    background: var(--bg-color);
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: var(--hero-bg-image);
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    opacity: var(--hero-bg-opacity, 0.9);
+    filter: blur(var(--hero-bg-blur, 0px));
+
+    z-index: 0;
+    pointer-events: none;
+}
+
+.hero-wrapper {
+    position: relative;
+    z-index: 1;
+
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    align-items: center;
+    gap: 3.5rem;
 }
 
 .btn-lang {
@@ -292,17 +326,6 @@ h3,
     background: var(--secondary-color);
 }
 
-.hero-section {
-    padding: 5rem 0 4rem;
-    background: radial-gradient(circle at 80% 20%, var(--bg-color) 0%, var(--secondary-color) 60%, transparent 100%);
-}
-
-.hero-wrapper {
-    display: grid;
-    grid-template-columns: 1.15fr 1fr;
-    align-items: center;
-    gap: 3.5rem;
-}
 
 .hero-badge {
     display: inline-block;
@@ -533,6 +556,162 @@ h3,
 .tag-after {
     background: var(--secondary-color);
     color: var(--text-color);
+}
+
+.product-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+}
+
+.product-modal.active {
+    display: flex;
+}
+
+.product-modal-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(35, 68, 87, 0.55);
+    backdrop-filter: blur(5px);
+}
+
+.product-modal-content {
+    position: relative;
+    z-index: 1;
+
+    width: min(900px, 100%);
+    max-height: 90vh;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+
+    padding: 35px;
+
+    overflow-y: auto;
+
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+
+    box-shadow: 0 25px 70px rgba(35, 68, 87, 0.25);
+
+    animation: productModalShow 0.25s ease;
+}
+
+@keyframes productModalShow {
+    from {
+        opacity: 0;
+        transform: scale(0.92);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.product-modal-close {
+    position: absolute;
+    top: 15px;
+    right: 18px;
+
+    width: 38px;
+    height: 38px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: var(--secondary-color);
+    color: var(--text-color);
+
+    font-size: 26px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    z-index: 2;
+
+    transition: 0.2s ease;
+}
+
+.product-modal-close:hover {
+    background: var(--primary-color);
+    transform: rotate(90deg);
+}
+
+.product-modal-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--secondary-color);
+
+    border-radius: var(--radius-md);
+
+    overflow: hidden;
+}
+
+.product-modal-image img {
+    width: 100%;
+    max-height: 480px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.product-modal-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.product-modal-info h2 {
+    margin: 0 0 15px;
+
+    color: var(--text-color);
+
+    font-size: 30px;
+}
+
+.product-modal-info>p {
+    margin-bottom: 25px;
+
+    color: var(--text-muted);
+
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.product-modal-detail {
+    padding: 18px;
+    margin-bottom: 25px;
+
+    background: var(--secondary-color);
+
+    border-radius: var(--radius-md);
+}
+
+.product-modal-detail h4 {
+    margin: 0 0 8px;
+
+    color: var(--text-color);
+}
+
+.product-modal-detail p {
+    margin: 0;
+
+    color: var(--text-muted);
+
+    line-height: 1.7;
 }
 
 .footer {

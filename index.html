@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebDesign - TPL</title>
-    
+
     <script src="js/app.js" defer></script>
 </head>
 
@@ -47,7 +47,8 @@
                 <a href="#hero" class="nav-link" data-i18n="nav_home">Trang chủ</a>
                 <a href="#about" class="nav-link" id="navAboutLink" data-i18n="nav_about">Giới thiệu</a>
                 <a href="#products" class="nav-link" data-i18n="nav_products">Sản phẩm</a>
-                <a href="#before-after" class="nav-link" id="navBeforeAfterLink" data-i18n="nav_before_after">Hiệu quả</a>
+                <a href="#before-after" class="nav-link" id="navBeforeAfterLink" data-i18n="nav_before_after">Hiệu
+                    quả</a>
                 <a href="#contact" class="nav-link" data-i18n="nav_contact">Liên hệ</a>
                 <a href="#contact" class="btn btn-primary nav-cta" data-i18n="btn_consult">Tư vấn chọn dầu gội</a>
             </nav>
@@ -63,7 +64,8 @@
                         Nuôi dưỡng mái tóc suôn mượt & chắc khỏe từ gốc đến ngọn
                     </h1>
                     <p class="hero-desc" id="hero-desc" data-i18n="hero_desc">
-                        Giải pháp chuyên sâu cho mái tóc khô xơ, gãy rụng và nuôi dưỡng da đầu sạch sâu bồng bềnh chuẩn Salon.
+                        Giải pháp chuyên sâu cho mái tóc khô xơ, gãy rụng và nuôi dưỡng da đầu sạch sâu bồng bềnh chuẩn
+                        Salon.
                     </p>
                     <div class="hero-buttons">
                         <a href="#products" class="btn btn-primary" data-i18n="btn_explore">Xem các dòng dầu gội</a>
@@ -73,7 +75,7 @@
 
                 <div class="hero-media">
                     <div class="hero-image-card">
-                        <img id="hero-image" src="assets/images/default-banner.jpg" alt="Bộ dầu gội TPL">
+                        <img id="hero-image" alt="Bộ dầu gội TPL">
                         <div class="floating-tag">
                             ⭐ Đánh giá 4.9/5 từ 10.000+ phụ nữ
                         </div>
@@ -86,9 +88,12 @@
             <div class="container">
                 <div class="story-card">
                     <span class="story-badge" data-i18n="story_badge">Ký Ức & Nguồn Cội</span>
-                    <h2 class="story-title" data-i18n="story_title">Kế thừa bí quyết dưỡng tóc cổ truyền từ bàn tay mẹ</h2>
+                    <h2 class="story-title" data-i18n="story_title">Kế thừa bí quyết dưỡng tóc cổ truyền từ bàn tay mẹ
+                    </h2>
                     <p class="story-desc" data-i18n="story_desc">
-                        Từ thuở xưa bên mái hiên nhà, mùi bồ kết nướng trên than hồng cùng vỏ bưởi, củ sả đã nuôi dưỡng mái tóc đen mượt óng ả của phụ nữ Việt. TPL kế thừa trọn vẹn tinh hoa mộc mạc ấy, kết hợp công nghệ chiết xuất hiện đại để mang đến giải pháp chăm sóc tóc dịu lành, thuần khiết.
+                        Từ thuở xưa bên mái hiên nhà, mùi bồ kết nướng trên than hồng cùng vỏ bưởi, củ sả đã nuôi dưỡng
+                        mái tóc đen mượt óng ả của phụ nữ Việt. TPL kế thừa trọn vẹn tinh hoa mộc mạc ấy, kết hợp công
+                        nghệ chiết xuất hiện đại để mang đến giải pháp chăm sóc tóc dịu lành, thuần khiết.
                     </p>
 
                     <div class="story-stats-grid">
@@ -113,7 +118,8 @@
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title" data-i18n="section_categories">Dòng Sản Phẩm Nổi Bật</h2>
-                    <p class="section-subtitle" data-i18n="section_categories_sub">Chăm sóc toàn diện từ da đầu, ngọn tóc cho tới hương thơm quyến rũ</p>
+                    <p class="section-subtitle" data-i18n="section_categories_sub">Chăm sóc toàn diện từ da đầu, ngọn
+                        tóc cho tới hương thơm quyến rũ</p>
                 </div>
 
                 <div class="grid-categories" id="categoriesContainer">
@@ -125,7 +131,8 @@
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title" data-i18n="section_before_after">Hiệu Quả Phục Hồi Sau 14 Ngày</h2>
-                    <p class="section-subtitle" data-i18n="section_ba_sub">Minh chứng thực tế từ khách hàng trải nghiệm liệu trình TPL</p>
+                    <p class="section-subtitle" data-i18n="section_ba_sub">Minh chứng thực tế từ khách hàng trải nghiệm
+                        liệu trình TPL</p>
                 </div>
 
                 <div class="before-after-grid">
@@ -141,6 +148,27 @@
             </div>
         </section>
     </main>
+    <div class="product-modal" id="productModal">
+        <div class="product-modal-overlay" id="productModalOverlay"></div>
+
+        <div class="product-modal-content">
+            <button class="product-modal-close" id="productModalClose">&times;</button>
+
+            <div class="product-modal-image">
+                <img id="modalProductImage" src="" alt="">
+            </div>
+
+            <div class="product-modal-info">
+                <h2 id="modalProductName"></h2>
+                <p id="modalProductDesc"></p>
+
+                <div class="product-modal-detail">
+                    <h4 data-i18n="product_info"></h4>
+                    <p id="modalProductDetail"></p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer id="contact" class="footer">
         <div class="container footer-content">
@@ -160,5 +188,7 @@
         </div>
     </footer>
 
+
 </body>
+
 </html>

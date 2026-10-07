@@ -8,6 +8,27 @@
 }
 
 @media (max-width: 767.98px) {
+    .product-modal {
+        padding: 15px;
+    }
+
+    .product-modal-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+
+        padding: 25px;
+
+        max-height: 92vh;
+    }
+
+    .product-modal-image img {
+        max-height: 300px;
+    }
+
+    .product-modal-info h2 {
+        font-size: 24px;
+    }
+
     .story-title {
         white-space: normal;
     }

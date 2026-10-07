@@ -62,12 +62,40 @@ function renderCategories(categories, customColors) {
     <div class="cat-pill" style="background:${color}"></div> 
     <h3 class="cat-title">${cat.name}</h3> 
     <p class="cat-desc">${cat.desc}</p> 
-    <span class="cat-action" style="color:${color}">
-        ${currentLang === "en" ? "View details →" : "Xem chi tiết →"}
-    </span> 
+    <span class="cat-action product-detail-btn" style="color:${color}">
+    ${currentLang === "en" ? "View details →" : "Xem chi tiết →"}
+</span>
 `;
         catContainer.appendChild(card);
+        const detailBtn = card.querySelector(".product-detail-btn");
+
+        if (detailBtn) {
+            detailBtn.addEventListener("click", () => {
+                openProductModal(cat);
+            });
+        }
     });
+}
+
+function openProductModal(product) {
+    const modal = document.getElementById("productModal");
+
+    const image = document.getElementById("modalProductImage");
+    const name = document.getElementById("modalProductName");
+    const desc = document.getElementById("modalProductDesc");
+    const detail = document.getElementById("modalProductDetail");
+
+    if (!modal) return;
+
+    image.src = product.image;
+    image.alt = product.name;
+
+    name.textContent = product.name;
+
+    detail.textContent = product.detail || product.desc;
+    modal.classList.add("active");
+
+    document.body.style.overflow = "hidden";
 }
 
 async function switchTheme(themeFile) {
@@ -119,10 +147,67 @@ async function initApp() {
             root.style.setProperty("--accent-color", baseConfig.theme.accent_color);
             root.style.setProperty("--bg-color", baseConfig.theme.bg_color);
             root.style.setProperty("--text-color", baseConfig.theme.text_color);
-            root.style.setProperty("--header-footer-color", baseConfig.theme.header_footer_color);
             root.style.setProperty("--footer-color", baseConfig.theme.footer_color);
         }
 
+        if (baseConfig.hero) {
+            const heroSection = document.querySelector(".hero-section");
+
+            if (baseConfig.hero.background_image) {
+                const heroImageUrl = new URL(
+                    baseConfig.hero.background_image,
+                    document.baseURI
+                ).href;
+
+                root.style.setProperty(
+                    "--hero-bg-image",
+                    `url("${heroImageUrl}")`
+                );
+
+                if (heroSection) {
+                    heroSection.style.setProperty(
+                        "--hero-bg-image",
+                        `url("${heroImageUrl}")`
+                    );
+                }
+                if (baseConfig.hero && baseConfig.hero.hero_image) {
+                    const heroImage = document.getElementById("hero-image");
+
+                    if (heroImage) {
+                        heroImage.src = baseConfig.hero.hero_image;
+                        heroImage.alt = baseConfig.brand_name || "";
+                    }
+                }
+            }
+
+            if (baseConfig.hero.background_opacity !== undefined) {
+                root.style.setProperty(
+                    "--hero-bg-opacity",
+                    baseConfig.hero.background_opacity
+                );
+
+                if (heroSection) {
+                    heroSection.style.setProperty(
+                        "--hero-bg-opacity",
+                        baseConfig.hero.background_opacity
+                    );
+                }
+            }
+
+            if (baseConfig.hero.background_blur) {
+                root.style.setProperty(
+                    "--hero-bg-blur",
+                    baseConfig.hero.background_blur
+                );
+
+                if (heroSection) {
+                    heroSection.style.setProperty(
+                        "--hero-bg-blur",
+                        baseConfig.hero.background_blur
+                    );
+                }
+            }
+        }
         if (baseConfig.brand_name) {
             document.title = baseConfig.brand_name;
             const logoEl = document.getElementById("brand-logo");
@@ -155,6 +240,7 @@ async function initApp() {
     } catch (err) {
         console.error(err);
     }
+
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
@@ -206,4 +292,28 @@ document.addEventListener("DOMContentLoaded", async () => {
             item.addEventListener("click", () => navMenu.classList.remove("active"));
         });
     }
+    const productModal = document.getElementById("productModal");
+    const productModalClose = document.getElementById("productModalClose");
+    const productModalOverlay = document.getElementById("productModalOverlay");
+
+    function closeProductModal() {
+        if (productModal) {
+            productModal.classList.remove("active");
+            document.body.style.overflow = "";
+        }
+    }
+
+    if (productModalClose) {
+        productModalClose.addEventListener("click", closeProductModal);
+    }
+
+    if (productModalOverlay) {
+        productModalOverlay.addEventListener("click", closeProductModal);
+    }
+
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+            closeProductModal();
+        }
+    });
 });
