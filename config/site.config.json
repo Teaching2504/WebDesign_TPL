@@ -1,0 +1,39 @@
+{
+  "brand_id": "tpl_beauty_01",
+  "brand_name": "TPL - The Pretty Life",
+  "logo_url": "./assets/logos/tpl-logo.png",
+  "favicon_url": "./assets/logos/favicon.ico",
+  "theme": {
+    "primary_color": "#9CCCE8",
+    "secondary_color": "#C7E8F5",
+    "accent_color": "#6FAED1",
+    "bg_color": "#F7FCFF",
+    "text_color": "#2F4F63",
+    "font_family": "'Playfair Display', Georgia, serif"
+  },
+  "contact": {
+    "phone": "0783741057",
+    "email": "tplbeauty@gmail.com",
+    "address": "123 Nguyễn Huệ, Quận 1, TP. Hồ Chí Minh"
+  },
+  "features": {
+    "enable_quiz": true,
+    "enable_before_after": true,
+    "enable_dark_mode": false
+  },
+  "categories": {
+    "skincare_makeup": {
+      "name": "Beauty",
+      "color": "#F3B6C8"
+    },
+    "perfume": {
+      "name": "Fragrance",
+      "color": "#F3D37A"
+    },
+    "haircare": {
+      "name": "Hair Care",
+      "color": "#9CCCE8"
+    }
+  },
+  "default_language": "vi"
+}

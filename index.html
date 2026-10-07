@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebDesign - TPL</title>
+    <script src="js/app.js" defer></script>
+</head>
+
+<body>
+
+    <aside class="demo-switcher-bar">
+        <div class="switcher-group">
+            <label for="configPresetSelect">Giao diện:</label>
+            <select id="configPresetSelect" class="switcher-select">
+                <option value="site.config.json">TPL - The Pretty Life</option>
+                <option value="theme-pink.json">Punévie</option>
+                <option value="theme-green.json">L'Cale Perfume</option>
+            </select>
+
+
+            <div class="lang-switch-box">
+                <button type="button" class="btn-lang active" data-lang="vi">🇻🇳 VI</button>
+                <button type="button" class="btn-lang" data-lang="en">🇬🇧 EN</button>
+            </div>
+
+
+            <button type="button" id="darkModeBtn" class="btn-icon" title="Đổi chế độ Sáng/Tối">
+                🌙
+            </button>
+
+            <a href="admin.html" class="btn-admin-link" title="Đến trang quản trị">Admin</a>
+        </div>
+    </aside>
+
+
+    <header class="header">
+        <div class="container header-content">
+            <a href="#" class="brand-logo" id="brand-logo">
+                <span class="logo-text">TPL - The Pretty Life</span>
+            </a>
+
+
+            <button class="nav-toggle-btn" id="navToggle" aria-label="Mở menu">
+                ☰
+            </button>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="#hero" class="nav-link" data-i18n="nav_home">Trang chủ</a>
+                <a href="#products" class="nav-link" data-i18n="nav_products">Sản phẩm</a>
+                <a href="#quiz" class="nav-link" id="navQuizLink" data-i18n="nav_quiz">Trắc nghiệm tóc</a>
+                <a href="#before-after" class="nav-link" id="navBeforeAfterLink" data-i18n="nav_before_after">Hiệu
+                    quả</a>
+                <a href="#contact" class="nav-link" data-i18n="nav_contact">Liên hệ</a>
+                <a href="#quiz" class="btn btn-primary nav-cta" data-i18n="btn_consult">Tư vấn chọn dầu gội</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <main>
+
+        <section id="hero" class="hero-section">
+            <div class="container hero-wrapper">
+                <div class="hero-text">
+                    <span class="hero-badge">100% Tinh dầu tự nhiên & Không Paraben</span>
+                    <h1 class="hero-title" id="hero-title" data-i18n="hero_title">
+                        Nuôi dưỡng mái tóc suôn mượt & chắc khỏe từ gốc đến ngọn
+                    </h1>
+                    <p class="hero-desc" id="hero-desc" data-i18n="hero_desc">
+                        Giải pháp chuyên sâu cho mái tóc khô xơ, gãy rụng và nuôi dưỡng da đầu sạch sâu bồng bềnh chuẩn
+                        Salon.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#products" class="btn btn-primary" data-i18n="btn_explore">Xem các dòng dầu gội</a>
+                        <a href="#quiz" class="btn btn-outline" data-i18n="btn_quiz">Kiểm tra tình trạng tóc</a>
+                    </div>
+                </div>
+
+                <div class="hero-media">
+                    <div class="hero-image-card">
+
+                        <img id="hero-image" src="assets/images/default-banner.jpg" alt="Bộ dầu gội TPL">
+                        <div class="floating-tag">
+                            ⭐ Đánh giá 4.9/5 từ 10.000+ phụ nữ
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section id="products" class="section categories-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-i18n="section_categories">Dòng Sản Phẩm Nổi Bật</h2>
+                    <p class="section-subtitle">Chăm sóc toàn diện từ da đầu, ngọn tóc cho tới hương thơm quyến rũ</p>
+                </div>
+
+                <div class="grid-categories" id="categoriesContainer">
+                </div>
+            </div>
+        </section>
+
+
+
+        <section id="quiz" class="section quiz-section">
+            <div class="container">
+                <div class="quiz-card">
+                    <h2 data-i18n="quiz_title">🔬 Chưa biết tóc mình hợp với loại dầu gội nào?</h2>
+                    <p data-i18n="quiz_desc">Chỉ 60 giây làm trắc nghiệm, chuyên gia TPL sẽ gợi ý phác đồ chăm sóc tóc
+                        chuẩn xác nhất cho bạn.</p>
+                    <button class="btn btn-primary" data-i18n="btn_start_quiz">Bắt đầu chẩn đoán tóc</button>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section id="before-after" class="section before-after-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-i18n="section_before_after">Hiệu Quả Phục Hồi Sau 14 Ngày</h2>
+                    <p class="section-subtitle">Minh chứng thực tế từ khách hàng trải nghiệm liệu trình TPL</p>
+                </div>
+
+                <div class="before-after-grid">
+                    <div class="card ba-card">
+                        <div class="ba-tag tag-before">Trước khi dùng</div>
+                        <p>Tóc khô xơ, chẻ ngọn, da đầu bết dầu và gãy rụng khi chải.</p>
+                    </div>
+                    <div class="card ba-card">
+                        <div class="ba-tag tag-after">Sau 14 ngày</div>
+                        <p>Tóc tơi bồng óng ả, chân tóc chắc khỏe, giảm gãy rụng tới 85%.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer id="contact" class="footer">
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h3 id="footer-brand-name">TPL - The Pretty Life</h3>
+                <p>Thương hiệu chăm sóc tóc chuyên sâu từ thiên nhiên.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Liên Hệ Với Chúng Tôi</h4>
+                <p>📍 Địa chỉ: <span id="footer-address">123 Nguyễn Huệ, TP. HCM</span></p>
+                <p>📞 Hotline: <span id="footer-phone">0783741057</span></p>
+                <p>✉️ Email: <span id="footer-email">tplbeauty@gmail.com</span></p>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p id="footer-copyright">© Bản quyền thuộc về TPL - 2026</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
+</body>
+
+</html>

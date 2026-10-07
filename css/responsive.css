@@ -1,0 +1,129 @@
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(1rem, 4vw, 2rem);
+  padding-right: clamp(1rem, 4vw, 2rem);
+}
+
+
+@media (max-width: 767.98px) {
+  .hide-on-mobile {
+    display: none !important;
+  }
+
+  .nav-toggle-btn {
+    display: block;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--bg-card, #ffffff);
+    flex-direction: column;
+    padding: 1.5rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-top: 1px solid var(--border-color, #e2e8f0);
+    gap: 1rem;
+  }
+
+ 
+  .nav-menu.active {
+    display: flex;
+  }
+
+  
+  .hero-wrapper {
+    display: flex;
+    flex-direction: column-reverse; 
+    text-align: center;
+    gap: 1.5rem;
+    padding: 2rem 0;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-direction: column; 
+    gap: 0.75rem;
+  }
+
+ 
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+  }
+
+  
+  .before-after-box {
+    width: 100%;
+    height: auto;
+  }
+
+ 
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+}
+
+
+@media (min-width: 768px) {
+  
+  .nav-toggle-btn {
+    display: none;
+  }
+
+  
+  .nav-menu {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+    gap: 2rem;
+  }
+
+  
+  .hero-wrapper {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    align-items: center;
+    gap: 3rem;
+    padding: 4rem 0;
+  }
+
+  .hero-wrapper .hero-text {
+    text-align: left;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-direction: row; 
+    gap: 1rem;
+  }
+
+  
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
