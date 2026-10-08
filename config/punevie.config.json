@@ -1,4 +1,9 @@
 {
+
+  "brand_id": "punevie_skincare_02",
+  "brand_name": "PUNÉVIE - Beauty & Lifestyle",
+  "logo_url": "assets/brand_2/logos/logo2.png",
+
   "theme_name": "Pink Pastel",
   "theme": {
     "primary_color": "#F3B6C8",
@@ -9,9 +14,15 @@
     "text_color": "#4A1E2D",
     "footer_color": "#E58BA8"
   },
+
   "category_colors": [
     "#F3B6C8",
     "#FDA7DF",
     "#E84393"
-  ]
+  ],
+  
+  "hero": {
+    "left_image": "assets/brand_2/images/banner.png",
+    "hero_image": "assets/brand_2/images/hero-products.png"
+  }
 }

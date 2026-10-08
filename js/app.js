@@ -104,6 +104,71 @@ async function switchTheme(themeFile) {
         if (!res.ok) return;
         const data = await res.json();
 
+        const punevieBanner = document.getElementById("punevie-hero-banner");
+        const punevieLeftImage = document.getElementById("punevie-left-image");
+        const heroText = document.querySelector("#hero .hero-text");
+
+        const isPunevie = themeFile === "punevie.config.json";
+
+        const storyTitle = document.querySelector(".story-title");
+        const storyBadge = document.querySelector(".story-badge");
+        const storyDesc = document.querySelector(".story-desc");
+
+        if (isPunevie) {
+            if (storyBadge) storyBadge.textContent = "Câu chuyện PUNÉVIE";
+
+            if (storyTitle) {
+                storyTitle.textContent = "Vẻ đẹp bắt đầu từ sự nâng niu";
+            }
+
+            
+        if (storyDesc) {
+            storyDesc.textContent =
+                "PUNÉVIE bắt đầu từ một suy nghĩ giản dị: giữa những bộn bề của cuộc sống, người phụ nữ đôi khi dành quá nhiều thời gian chăm lo cho mọi thứ xung quanh mà quên rằng bản thân cũng cần được yêu thương. Chúng tôi tin rằng chăm sóc làn da không chỉ là để trở nên xinh đẹp hơn, mà còn là khoảng thời gian riêng để mỗi người phụ nữ thư giãn và trân trọng chính mình. Lấy cảm hứng từ vẻ đẹp thanh lịch của hoa hồng, PUNÉVIE mang đến những sản phẩm chăm sóc da dịu nhẹ, từ sữa rửa mặt, serum đến kem dưỡng và mặt nạ, để mỗi bước dưỡng da đều trở thành một trải nghiệm dễ chịu. Bởi với PUNÉVIE, vẻ đẹp không nằm ở sự hoàn hảo, mà ở sự tự tin và cách mỗi người phụ nữ biết yêu thương chính mình mỗi ngày.";
+        }
+
+        } else if (baseConfig && baseConfig[currentLang]) {
+            const dict = baseConfig[currentLang];
+
+            if (storyBadge) storyBadge.textContent = dict.story_badge || "";
+            if (storyTitle) storyTitle.textContent = dict.story_title || "";
+            if (storyDesc) storyDesc.textContent = dict.story_desc || "";
+        }
+        
+        document.body.classList.toggle("brand-punevie", isPunevie);
+
+        
+        const heroSection = document.getElementById("hero");
+
+        if (heroSection) {
+            if (isPunevie) {
+                heroSection.style.setProperty("--hero-bg-image", "none");
+            } else if (baseConfig?.hero?.background_image) {
+                const originalBg = new URL(
+                    baseConfig.hero.background_image,
+                    document.baseURI
+                ).href;
+
+                heroSection.style.setProperty(
+                    "--hero-bg-image",
+                    `url("${originalBg}")`
+                );
+            }
+        }
+
+
+        if (punevieBanner && punevieLeftImage && heroText) {
+            if (isPunevie && data.hero?.left_image) {
+                punevieLeftImage.src = data.hero.left_image;
+                punevieBanner.hidden = false;
+                heroText.hidden = true;
+            } else {
+                punevieBanner.hidden = true;
+                heroText.hidden = false;
+            }
+        }
+
+
         const root = document.documentElement;
         const theme = data.theme;
 
@@ -123,6 +188,35 @@ async function switchTheme(themeFile) {
         }
 
         if (baseConfig && baseConfig[currentLang] && baseConfig[currentLang].categories) {
+            
+            const activeBrand = data.brand_name ? data : baseConfig;
+            const logoEl = document.getElementById("brand-logo");
+
+            if (logoEl && activeBrand) {
+                logoEl.innerHTML = "";
+
+                const logoImg = document.createElement("img");
+                logoImg.src = activeBrand.logo_url;
+                logoImg.alt = activeBrand.brand_name;
+
+                const logoText = document.createElement("span");
+                logoText.className = "logo-text";
+                logoText.textContent = activeBrand.brand_name;
+
+                logoEl.append(logoImg, logoText);
+                document.title = activeBrand.brand_name;
+
+                const heroImage = document.getElementById("hero-image");
+
+                if (heroImage) {
+                    heroImage.src = data.hero?.hero_image
+                        || baseConfig.hero.hero_image;
+
+                    heroImage.alt = activeBrand.brand_name;
+                }
+
+            }
+
             renderCategories(
                 baseConfig[currentLang].categories,
                 data.category_colors
@@ -135,6 +229,15 @@ async function switchTheme(themeFile) {
 
 async function initApp() {
     try {
+        
+        document.body.classList.remove("brand-punevie");
+
+        const punevieBanner = document.getElementById("punevie-hero-banner");
+        const heroText = document.querySelector("#hero .hero-text");
+
+        if (punevieBanner) punevieBanner.hidden = true;
+        if (heroText) heroText.hidden = false;
+
         const res = await fetch("config/site.config.json");
         if (!res.ok) return;
         baseConfig = await res.json();
