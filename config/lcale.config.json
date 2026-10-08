@@ -3,24 +3,90 @@
   "brand_name": "L'Cale Perfume",
   "logo_url": "assets/brand_3/logos/logo3.png",
   "favicon_url": "",
-  "theme_name": "Yellow Honey",
   "theme": {
-    "primary_color": "#F3D37A",
-    "secondary_color": "#FEF7E3",
-    "third_color": "#E8C45A",
-    "accent_color": "#D4A936",
-    "bg_color": "#FFFCF5",
-    "text_color": "#423616",
-    "footer_color": "#E6C15A"
+    "primary_color": "#F4D88A",
+    "secondary_color": "#F8E7AE",
+    "third_color": "#FFFFF0",
+    "accent_color": "#824C2A",
+    "bg_color": "#FFF9EA",
+    "text_color": "#514633",
+    "footer_color": "#F4D88A",
+    "font_family": "'Nunito', 'Poppins', sans-serif"
+  },
+  "hero": {
+    "hero_image": "assets/brand_3/images/hero.png",
+    "background_opacity": 1,
+    "background_blur": "0px"
   },
   "contact": {
-    "phone": "0900000000",
+    "phone": "0968411333",
     "email": "hello@lcale.vn",
-    "address": "Số 1, Đường Cô Bắc, Quận 1, TP. HCM"
+    "address": "Số 1 Đường Võ Văn Tần, Phường Xuân Hòa, TP. HCM"
   },
-  "category_colors": [
-    "#F3D37A",
-    "#F9DF8E",
-    "#E5BE50"
-  ]
+  "features": {
+    "enable_about": true,
+    "enable_before_after": true,
+    "enable_dark_mode": true
+  },
+  "vi": {
+    "nav_home": "Trang chủ",
+    "nav_about": "Câu chuyện",
+    "nav_products": "Mùi hương",
+    "nav_before_after": "Xịt đúng cách",
+    "nav_contact": "Liên hệ",
+    "btn_consult": "Nhận tư vấn mùi hương",
+    "hero_badge": "Mỗi ngày một phiên bản",
+    "hero_title": "HÔM NAY, BẠN MUỐN LÀ AI?",
+    "hero_desc": "Dịu dàng một chút. Rực rỡ một chút. Hay quyến rũ theo cách rất riêng?",
+    "btn_explore": "Khám phá 4 phiên bản",
+    "btn_learn_more": "Câu chuyện của L'Cale",
+    "product_info": "Thông tin mùi hương",
+    "story_badge": "Mùi hương ở lại",
+    "story_title": "CÓ NHỮNG THỨ KHÔNG NHÌN THẤY, NHƯNG NGƯỜI TA VẪN NHỚ.",
+    "story_desc": "Một ánh nhìn. Một bài hát. Một buổi chiều. Và một mùi hương. L'Cale tin rằng mùi hương không chỉ ở trên làn da. Nó ở lại trong ký ức của bạn.",
+    "story_stat1_num": "4",
+    "story_stat1_label": "Phiên bản cho mỗi tâm trạng",
+    "story_stat2_num": "10ml",
+    "story_stat2_label": "Chai mini để thử mùi",
+    "story_stat3_num": "50ml",
+    "story_stat3_label": "Chai đầy đặn mang theo",
+    "section_categories": "Bốn Tâm Trạng. Bốn Phiên Bản.",
+    "section_categories_sub": "Chọn mùi hương hợp với con người bạn hôm nay",
+    "section_before_after": "XỊT ĐÚNG CÁCH, HƯƠNG Ở LẠI",
+    "section_ba_sub": "Vài bước nhỏ để mùi hương đi cùng bạn cả ngày",
+    "ba_tag_before": "Xịt sai cách",
+    "ba_desc_before": "Xịt lên da khô, chà hai cổ tay vào nhau, hương đầu bay nhanh và đổi mùi.",
+    "ba_tag_after": "Xịt đúng cách",
+    "ba_desc_after": "Xịt lên da sạch, hơi ẩm, ở các điểm ấm như cổ tay, hõm cổ, sau tai, cách 15-20cm. Để hương tự khô.",
+    "categories": [
+      {
+        "name": "CAL-01 · Pétale",
+        "color": "#F7CAC9",
+        "image": "assets/brand_3/images/cal1.png",
+        "desc": "Dịu dàng, trong trẻo. Hợp với buổi sáng.",
+        "detail": "Dịu dàng, trong trẻo. Thành phần: Hoa mẫu đơn, Lê, Vanilla. Hợp với: Buổi sáng. Dung tích: chai 50ml và chai mini 10ml."
+      },
+      {
+        "name": "CAL-02 · Soleil",
+        "color": "#F5A65B",
+        "image": "assets/brand_3/images/cal2.jpg",
+        "desc": "Rực rỡ, đầy năng lượng. Hợp với những buổi đi chơi.",
+        "detail": "Rực rỡ, đầy năng lượng. Thành phần: Hoa cam, Quýt. Hợp với: Đi chơi. Dung tích: chai 50ml và chai mini 10ml."
+      },
+      {
+        "name": "CAL-03 · Rouge",
+        "color": "#C96B7A",
+        "image": "assets/brand_3/images/cal3.jpg",
+        "desc": "Cuốn hút, ngọt ngào. Hợp với những buổi hẹn hò.",
+        "detail": "Cuốn hút, ngọt ngào. Thành phần: Anh đào, Hoa hồng, Hổ phách. Hợp với: Hẹn hò. Dung tích: chai 50ml và chai mini 10ml."
+      },
+      {
+        "name": "CAL-04 · Minuit",
+        "color": "#7A6A9C",
+        "image": "assets/brand_3/images/cal4.jpg",
+        "desc": "Bí ẩn, trầm lắng. Hợp với những giờ sau 10 giờ tối.",
+        "detail": "Bí ẩn, trầm lắng. Thành phần: Quả sung, Hoa diên vĩ. Hợp với: Sau 10 giờ. Dung tích: chai 50ml và chai mini 10ml."
+      }
+    ]
+  }
 }
