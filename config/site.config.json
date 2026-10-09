@@ -1,3 +1,4 @@
+
 {
   "brand_id": "tpl_beauty_01",
   "brand_name": "TPL - The Pretty Life",
@@ -14,10 +15,8 @@
     "font_family": "system-ui, -apple-system, sans-serif"
   },
   "hero": {
-    "background_image": "assets/brand_1/logos/logonav.png",
-    "hero_image": "assets/brand_1/images/producs.png",
-    "background_opacity": 1,
-    "background_blur": "0px"
+    "combined_image": "assets/brand_1/images/banner-hero.png",
+    "frame_color": "#E6F5FC"
   },
   "contact": {
     "phone": "0783741057",

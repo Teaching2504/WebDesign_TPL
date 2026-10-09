@@ -1,422 +1,491 @@
+
 let baseConfig = null;
+let activeConfig = null;
 let currentLang = "vi";
+
+/* =========================================
+   1. LOAD CSS
+   ========================================= */
 
 function loadCSS(href) {
     return new Promise((resolve) => {
-        if (document.querySelector(`link[href="${href}"]`)) return resolve();
+        if (document.querySelector(`link[href="${href}"]`)) {
+            resolve();
+            return;
+        }
+
         const link = document.createElement("link");
         link.rel = "stylesheet";
         link.href = href;
-        link.onload = () => resolve();
-        link.onerror = () => resolve();
+        link.onload = resolve;
+        link.onerror = resolve;
         document.head.appendChild(link);
     });
 }
 
-async function setLanguage(lang) {
-    try {
-        if (!baseConfig || !baseConfig[lang]) {
-            console.error(`Không tìm thấy ngôn ngữ: ${lang}`);
-            return;
-        }
+/* =========================================
+   2. APPLY THEME
+   ========================================= */
 
-        const dict = baseConfig[lang];
-        currentLang = lang;
+function applyTheme(config) {
+    const root = document.documentElement;
+    const theme = config.theme || {};
+    const baseTheme = baseConfig?.theme || {};
 
-        document.querySelectorAll("[data-i18n]").forEach((el) => {
-            const key = el.getAttribute("data-i18n");
+    const variables = {
+        "--primary-color": "primary_color",
+        "--secondary-color": "secondary_color",
+        "--third-color": "third_color",
+        "--accent-color": "accent_color",
+        "--bg-color": "bg_color",
+        "--text-color": "text_color",
+        "--footer-color": "footer_color",
+        "--bg-surface": "bg_surface",
+        "--text-muted": "text_muted",
+        "--border-color": "border_color",
+        "--font-family": "font_family"
+    };
 
-            if (dict[key]) {
-                el.textContent = dict[key];
-            }
-        });
-        if (dict.categories) {
-            renderCategories(dict.categories, null);
-        }
+    Object.entries(variables).forEach(([variable, key]) => {
+        const value = theme[key] ?? baseTheme[key];
 
-        document.querySelectorAll(".btn-lang").forEach((btn) => {
-            btn.classList.toggle(
-                "active",
-                btn.getAttribute("data-lang") === lang
-            );
-        });
-
-        localStorage.setItem("app_lang", lang);
-
-    } catch (err) {
-        console.error("Lỗi chuyển ngôn ngữ:", err);
-    }
-}
-
-function renderCategories(categories, customColors) {
-    const catContainer = document.getElementById("categoriesContainer");
-    if (!catContainer || !categories) return;
-
-    catContainer.innerHTML = "";
-    categories.forEach((cat, index) => {
-        const color = (customColors && customColors[index]) ? customColors[index] : cat.color;
-        const card = document.createElement("div");
-        card.className = "category-card";
-        card.innerHTML = ` 
-    <img class="cat-image" src="${cat.image}" alt="${cat.name}">
-    <div class="cat-pill" style="background:${color}"></div> 
-    <h3 class="cat-title">${cat.name}</h3> 
-    <p class="cat-desc">${cat.desc}</p> 
-    <span class="cat-action product-detail-btn" style="color:${color}">
-    ${currentLang === "en" ? "View details →" : "Xem chi tiết →"}
-</span>
-`;
-        catContainer.appendChild(card);
-        const detailBtn = card.querySelector(".product-detail-btn");
-
-        if (detailBtn) {
-            detailBtn.addEventListener("click", () => {
-                openProductModal(cat);
-            });
+        if (value !== undefined && value !== null) {
+            root.style.setProperty(variable, value);
+        } else {
+            root.style.removeProperty(variable);
         }
     });
 }
 
+/* =========================================
+   3. RENDER BRAND
+   ========================================= */
+
+function renderBrand(config) {
+    const brandName = config.brand_name || "Thương hiệu";
+
+    document.title = brandName;
+
+    const logo = document.getElementById("brand-logo");
+
+    if (logo) {
+        logo.replaceChildren();
+
+        if (config.logo_url) {
+            const image = document.createElement("img");
+            image.src = config.logo_url;
+            image.alt = brandName;
+            logo.appendChild(image);
+        }
+
+        const name = document.createElement("span");
+        name.className = "logo-text";
+        name.textContent = brandName;
+        logo.appendChild(name);
+    }
+
+    const footerName = document.getElementById("footer-brand-name");
+    const copyright = document.getElementById("footer-copyright");
+
+    if (footerName) footerName.textContent = brandName;
+
+    if (copyright) {
+        copyright.textContent =
+            `© Bản quyền thuộc về ${brandName} - ${new Date().getFullYear()}`;
+    }
+
+    const contact = config.contact || {};
+
+    const phone = document.getElementById("footer-phone");
+    const email = document.getElementById("footer-email");
+    const address = document.getElementById("footer-address");
+
+    if (phone) phone.textContent = contact.phone || "";
+    if (email) email.textContent = contact.email || "";
+    if (address) address.textContent = contact.address || "";
+}
+
+/* =========================================
+   4. HERO COMBINED
+   Mot anh ghep cho moi thuong hieu.
+   Duong dan va noi dung lay tu JSON.
+   ========================================= */
+
+function renderHero(config) {
+    const heroSection = document.getElementById("hero");
+    if (!heroSection) return;
+
+    const hero = config.hero || {};
+
+    const dict = {
+        ...(baseConfig?.[currentLang] || {}),
+        ...(config?.[currentLang] || {})
+    };
+
+    const combinedImage = hero.combined_image || "";
+
+    heroSection.style.setProperty(
+        "--hero-frame-bg",
+        hero.frame_color ||
+        config.theme?.secondary_color ||
+        "#ffffff"
+    );
+
+    heroSection.style.setProperty("--hero-bg-image", "none");
+
+    heroSection.replaceChildren();
+
+    const shell = document.createElement("div");
+    shell.className = "container hero-combined-shell";
+
+    if (combinedImage) {
+        const imageWrap = document.createElement("div");
+        imageWrap.className = "hero-combined-image-wrap";
+
+        const image = document.createElement("img");
+        image.className = "hero-combined-image";
+        image.src = combinedImage;
+        image.alt = `Banner và bộ sản phẩm ${config.brand_name || ""}`;
+
+        imageWrap.appendChild(image);
+        shell.appendChild(imageWrap);
+    } else {
+        const fallback = document.createElement("div");
+        fallback.className = "hero-combined-fallback";
+
+        const title = document.createElement("h1");
+        title.textContent = config.brand_name || "Thương hiệu";
+
+        const desc = document.createElement("p");
+        desc.textContent =
+            config.hero?.description ||
+            "Khám phá các sản phẩm và câu chuyện thương hiệu.";
+
+        fallback.append(title, desc);
+        shell.appendChild(fallback);
+    }
+
+    const actions = document.createElement("div");
+    actions.id = "hero-actions";
+    actions.className = "hero-combined-actions";
+
+    const explore = document.createElement("a");
+    explore.href = "#products";
+    explore.className = "btn btn-primary";
+    explore.textContent =
+        dict.btn_explore || "Khám phá sản phẩm";
+
+    const story = document.createElement("a");
+    story.href = "#about";
+    story.className = "btn btn-outline";
+    story.textContent =
+        dict.btn_learn_more || "Khám phá câu chuyện";
+
+    actions.append(explore, story);
+    shell.appendChild(actions);
+
+    heroSection.appendChild(shell);
+}
+
+/* =========================================
+   5. STORY
+   ========================================= */
+
+function renderStory(config) {
+    const title = document.querySelector(".story-title");
+    const badge = document.querySelector(".story-badge");
+    const desc = document.querySelector(".story-desc");
+
+    const dict = {
+        ...(baseConfig?.[currentLang] || {}),
+        ...(config?.[currentLang] || {})
+    };
+
+    if (badge) badge.textContent = dict.story_badge || "";
+    if (title) title.textContent = dict.story_title || "";
+    if (desc) desc.textContent = dict.story_desc || "";
+}
+
+/* =========================================
+   6. PRODUCT CATEGORIES
+   ========================================= */
+
+function renderCategories(categories, customColors) {
+    const container = document.getElementById("categoriesContainer");
+    if (!container) return;
+
+    container.replaceChildren();
+
+    if (!Array.isArray(categories)) return;
+
+    categories.forEach((cat, index) => {
+        const color =
+            customColors?.[index] ||
+            cat.color ||
+            "var(--accent-color)";
+
+        const card = document.createElement("div");
+        card.className = "category-card";
+
+        const image = document.createElement("img");
+        image.className = "cat-image";
+        image.src = cat.image || "";
+        image.alt = cat.name || "";
+
+        const pill = document.createElement("div");
+        pill.className = "cat-pill";
+        pill.style.backgroundColor = color;
+
+        const title = document.createElement("h3");
+        title.className = "cat-title";
+        title.textContent = cat.name || "";
+
+        const desc = document.createElement("p");
+        desc.className = "cat-desc";
+        desc.textContent = cat.desc || "";
+
+        const detailBtn = document.createElement("span");
+        detailBtn.className = "cat-action product-detail-btn";
+        detailBtn.style.color = color;
+        detailBtn.textContent =
+            currentLang === "en" ? "View details →" : "Xem chi tiết →";
+
+        detailBtn.addEventListener("click", () => {
+            openProductModal(cat);
+        });
+
+        card.append(image, pill, title, desc, detailBtn);
+        container.appendChild(card);
+    });
+}
+
+/* =========================================
+   7. PRODUCT MODAL
+   ========================================= */
+
 function openProductModal(product) {
     const modal = document.getElementById("productModal");
+    if (!modal) return;
 
     const image = document.getElementById("modalProductImage");
     const name = document.getElementById("modalProductName");
     const desc = document.getElementById("modalProductDesc");
     const detail = document.getElementById("modalProductDetail");
 
-    if (!modal) return;
+    if (image) {
+        image.src = product.image || "";
+        image.alt = product.name || "";
+    }
 
-    image.src = product.image;
-    image.alt = product.name;
+    if (name) name.textContent = product.name || "";
+    if (desc) desc.textContent = product.desc || "";
 
-    name.textContent = product.name;
+    if (detail) {
+        detail.textContent =
+            product.detail || product.desc || "";
+    }
 
-    detail.textContent = product.detail || product.desc;
     modal.classList.add("active");
-
     document.body.style.overflow = "hidden";
+}
+
+function closeProductModal() {
+    const modal = document.getElementById("productModal");
+
+    if (modal) {
+        modal.classList.remove("active");
+        document.body.style.overflow = "";
+    }
+}
+
+/* =========================================
+   8. LANGUAGE
+   ========================================= */
+
+async function setLanguage(lang) {
+    if (!baseConfig) return;
+
+    const config = activeConfig || baseConfig;
+
+    currentLang = baseConfig[lang] ? lang : "vi";
+
+    const dict = {
+        ...(baseConfig[currentLang] || {}),
+        ...(config[currentLang] || {})
+    };
+
+    document.querySelectorAll("[data-i18n]").forEach((element) => {
+        const key = element.getAttribute("data-i18n");
+
+        if (dict[key] !== undefined && !Array.isArray(dict[key])) {
+            element.textContent = dict[key];
+        }
+    });
+
+    const categories =
+        config[currentLang]?.categories ||
+        config.categories ||
+        baseConfig[currentLang]?.categories;
+
+    renderCategories(categories, config.category_colors);
+
+    renderStory(config);
+    renderHero(config);
+
+    document.querySelectorAll(".btn-lang").forEach((button) => {
+        button.classList.toggle(
+            "active",
+            button.getAttribute("data-lang") === currentLang
+        );
+    });
+
+    localStorage.setItem("app_lang", currentLang);
+}
+
+/* =========================================
+   9. CHANGE BRAND
+   ========================================= */
+
+async function applyBrandConfig(config) {
+    activeConfig = config;
+
+    document.body.classList.toggle(
+        "brand-punevie",
+        config.brand_id === "punevie_skincare_02"
+    );
+
+    applyTheme(config);
+    renderBrand(config);
+
+    await setLanguage(currentLang);
 }
 
 async function switchTheme(themeFile) {
     try {
-        const res = await fetch(`config/${themeFile}`);
-        if (!res.ok) return;
-        const data = await res.json();
+        const response = await fetch(`config/${themeFile}`);
 
-        const punevieBanner = document.getElementById("punevie-hero-banner");
-        const punevieLeftImage = document.getElementById("punevie-left-image");
-        const heroText = document.querySelector("#hero .hero-text");
-
-        const isPunevie = themeFile === "punevie.config.json";
-
-        const storyTitle = document.querySelector(".story-title");
-        const storyBadge = document.querySelector(".story-badge");
-        const storyDesc = document.querySelector(".story-desc");
-
-        if (isPunevie) {
-            if (storyBadge) storyBadge.textContent = "Câu chuyện PUNÉVIE";
-
-            if (storyTitle) {
-                storyTitle.textContent = "Vẻ đẹp bắt đầu từ sự nâng niu";
-            }
-
-            
-        if (storyDesc) {
-            storyDesc.textContent =
-                "PUNÉVIE bắt đầu từ một suy nghĩ giản dị: giữa những bộn bề của cuộc sống, người phụ nữ đôi khi dành quá nhiều thời gian chăm lo cho mọi thứ xung quanh mà quên rằng bản thân cũng cần được yêu thương. Chúng tôi tin rằng chăm sóc làn da không chỉ là để trở nên xinh đẹp hơn, mà còn là khoảng thời gian riêng để mỗi người phụ nữ thư giãn và trân trọng chính mình. Lấy cảm hứng từ vẻ đẹp thanh lịch của hoa hồng, PUNÉVIE mang đến những sản phẩm chăm sóc da dịu nhẹ, từ sữa rửa mặt, serum đến kem dưỡng và mặt nạ, để mỗi bước dưỡng da đều trở thành một trải nghiệm dễ chịu. Bởi với PUNÉVIE, vẻ đẹp không nằm ở sự hoàn hảo, mà ở sự tự tin và cách mỗi người phụ nữ biết yêu thương chính mình mỗi ngày.";
+        if (!response.ok) {
+            throw new Error(`Không tải được ${themeFile}`);
         }
 
-        } else if (baseConfig && baseConfig[currentLang]) {
-            const dict = baseConfig[currentLang];
-
-            if (storyBadge) storyBadge.textContent = dict.story_badge || "";
-            if (storyTitle) storyTitle.textContent = dict.story_title || "";
-            if (storyDesc) storyDesc.textContent = dict.story_desc || "";
-        }
-        
-        document.body.classList.toggle("brand-punevie", isPunevie);
-
-        
-        const heroSection = document.getElementById("hero");
-
-        if (heroSection) {
-            if (isPunevie) {
-                heroSection.style.setProperty("--hero-bg-image", "none");
-            } else if (baseConfig?.hero?.background_image) {
-                const originalBg = new URL(
-                    baseConfig.hero.background_image,
-                    document.baseURI
-                ).href;
-
-                heroSection.style.setProperty(
-                    "--hero-bg-image",
-                    `url("${originalBg}")`
-                );
-            }
-        }
-
-
-        if (punevieBanner && punevieLeftImage && heroText) {
-            if (isPunevie && data.hero?.left_image) {
-                punevieLeftImage.src = data.hero.left_image;
-                punevieBanner.hidden = false;
-                heroText.hidden = true;
-            } else {
-                punevieBanner.hidden = true;
-                heroText.hidden = false;
-            }
-        }
-
-
-        const root = document.documentElement;
-        const theme = data.theme;
-
-        if (theme) {
-            if (theme.primary_color) root.style.setProperty("--primary-color", theme.primary_color);
-            if (theme.secondary_color) root.style.setProperty("--secondary-color", theme.secondary_color);
-
-            if (theme.third_color) {
-                root.style.setProperty("--third-color", theme.third_color);
-            }
-            if (theme.accent_color) root.style.setProperty("--accent-color", theme.accent_color);
-            if (theme.bg_color) root.style.setProperty("--bg-color", theme.bg_color);
-            if (theme.text_color) root.style.setProperty("--text-color", theme.text_color);
-            if (theme.footer_color) {
-                root.style.setProperty("--footer-color", theme.footer_color);
-            }
-        }
-
-        if (baseConfig && baseConfig[currentLang] && baseConfig[currentLang].categories) {
-            
-            const activeBrand = data.brand_name ? data : baseConfig;
-            const logoEl = document.getElementById("brand-logo");
-
-            if (logoEl && activeBrand) {
-                logoEl.innerHTML = "";
-
-                const logoImg = document.createElement("img");
-                logoImg.src = activeBrand.logo_url;
-                logoImg.alt = activeBrand.brand_name;
-
-                const logoText = document.createElement("span");
-                logoText.className = "logo-text";
-                logoText.textContent = activeBrand.brand_name;
-
-                logoEl.append(logoImg, logoText);
-                document.title = activeBrand.brand_name;
-
-                const heroImage = document.getElementById("hero-image");
-
-                if (heroImage) {
-                    heroImage.src = data.hero?.hero_image
-                        || baseConfig.hero.hero_image;
-
-                    heroImage.alt = activeBrand.brand_name;
-                }
-
-            }
-
-            renderCategories(
-                baseConfig[currentLang].categories,
-                data.category_colors
-            );
-        }
-    } catch (err) {
-        console.error(err);
+        const config = await response.json();
+        await applyBrandConfig(config);
+    } catch (error) {
+        console.error("Lỗi chuyển thương hiệu:", error);
     }
 }
+
+/* =========================================
+   10. INIT APPLICATION
+   ========================================= */
 
 async function initApp() {
     try {
-        
-        document.body.classList.remove("brand-punevie");
+        const response = await fetch("config/site.config.json");
 
-        const punevieBanner = document.getElementById("punevie-hero-banner");
-        const heroText = document.querySelector("#hero .hero-text");
-
-        if (punevieBanner) punevieBanner.hidden = true;
-        if (heroText) heroText.hidden = false;
-
-        const res = await fetch("config/site.config.json");
-        if (!res.ok) return;
-        baseConfig = await res.json();
-
-        const root = document.documentElement;
-        if (baseConfig.theme) {
-            root.style.setProperty("--primary-color", baseConfig.theme.primary_color);
-            root.style.setProperty("--secondary-color", baseConfig.theme.secondary_color);
-            root.style.setProperty("--third-color", baseConfig.theme.third_color);
-            root.style.setProperty("--accent-color", baseConfig.theme.accent_color);
-            root.style.setProperty("--bg-color", baseConfig.theme.bg_color);
-            root.style.setProperty("--text-color", baseConfig.theme.text_color);
-            root.style.setProperty("--footer-color", baseConfig.theme.footer_color);
+        if (!response.ok) {
+            throw new Error("Không tải được cấu hình mặc định");
         }
 
-        if (baseConfig.hero) {
-            const heroSection = document.querySelector(".hero-section");
+        baseConfig = await response.json();
 
-            if (baseConfig.hero.background_image) {
-                const heroImageUrl = new URL(
-                    baseConfig.hero.background_image,
-                    document.baseURI
-                ).href;
+        const savedLang =
+            localStorage.getItem("app_lang") ||
+            baseConfig.default_language ||
+            "vi";
 
-                root.style.setProperty(
-                    "--hero-bg-image",
-                    `url("${heroImageUrl}")`
-                );
+        currentLang = savedLang;
 
-                if (heroSection) {
-                    heroSection.style.setProperty(
-                        "--hero-bg-image",
-                        `url("${heroImageUrl}")`
-                    );
-                }
-                if (baseConfig.hero && baseConfig.hero.hero_image) {
-                    const heroImage = document.getElementById("hero-image");
-
-                    if (heroImage) {
-                        heroImage.src = baseConfig.hero.hero_image;
-                        heroImage.alt = baseConfig.brand_name || "";
-                    }
-                }
-            }
-
-            if (baseConfig.hero.background_opacity !== undefined) {
-                root.style.setProperty(
-                    "--hero-bg-opacity",
-                    baseConfig.hero.background_opacity
-                );
-
-                if (heroSection) {
-                    heroSection.style.setProperty(
-                        "--hero-bg-opacity",
-                        baseConfig.hero.background_opacity
-                    );
-                }
-            }
-
-            if (baseConfig.hero.background_blur) {
-                root.style.setProperty(
-                    "--hero-bg-blur",
-                    baseConfig.hero.background_blur
-                );
-
-                if (heroSection) {
-                    heroSection.style.setProperty(
-                        "--hero-bg-blur",
-                        baseConfig.hero.background_blur
-                    );
-                }
-            }
-        }
-        if (baseConfig.brand_name) {
-            document.title = baseConfig.brand_name;
-            const logoEl = document.getElementById("brand-logo");
-            if (logoEl) {
-                logoEl.innerHTML = `
-        <img src="${baseConfig.logo_url}" alt="${baseConfig.brand_name}">
-        <span class="logo-text">${baseConfig.brand_name}</span>
-    `;
-            }
-
-            const fBrand = document.getElementById("footer-brand-name");
-            if (fBrand) fBrand.textContent = baseConfig.brand_name;
-
-            const fCopy = document.getElementById("footer-copyright");
-            if (fCopy) fCopy.textContent = `© Bản quyền thuộc về ${baseConfig.brand_name} - ${new Date().getFullYear()}`;
-        }
-
-        if (baseConfig.contact) {
-            const phone = document.getElementById("footer-phone");
-            const email = document.getElementById("footer-email");
-            const addr = document.getElementById("footer-address");
-            if (phone && baseConfig.contact.phone) phone.textContent = baseConfig.contact.phone;
-            if (email && baseConfig.contact.email) email.textContent = baseConfig.contact.email;
-            if (addr && baseConfig.contact.address) addr.textContent = baseConfig.contact.address;
-        }
-
-
-        const savedLang = localStorage.getItem("app_lang") || baseConfig.default_language || "vi";
-        await setLanguage(savedLang);
-    } catch (err) {
-        console.error(err);
+        await applyBrandConfig(baseConfig);
+    } catch (error) {
+        console.error("Lỗi khởi tạo website:", error);
     }
-
 }
+
+/* =========================================
+   11. EVENTS
+   ========================================= */
 
 document.addEventListener("DOMContentLoaded", async () => {
     await loadCSS("css/reset.css");
     await loadCSS("css/style.css");
     await loadCSS("css/responsive.css");
 
-    const savedTheme = localStorage.getItem("app_theme") || "light";
-    document.documentElement.setAttribute("data-theme", savedTheme);
+    const savedTheme =
+        localStorage.getItem("app_theme") || "light";
+
+    document.documentElement.setAttribute(
+        "data-theme",
+        savedTheme
+    );
 
     const darkBtn = document.getElementById("darkModeBtn");
+
     if (darkBtn) {
-        darkBtn.textContent = savedTheme === "dark" ? "☀️" : "🌙";
+        darkBtn.textContent =
+            savedTheme === "dark" ? "☀️" : "🌙";
+
         darkBtn.addEventListener("click", () => {
-            const isDark = document.documentElement.getAttribute("data-theme") === "dark";
-            const next = isDark ? "light" : "dark";
-            document.documentElement.setAttribute("data-theme", next);
-            localStorage.setItem("app_theme", next);
-            darkBtn.textContent = next === "dark" ? "☀️" : "🌙";
+            const isDark =
+                document.documentElement.getAttribute("data-theme") === "dark";
+
+            const nextTheme = isDark ? "light" : "dark";
+
+            document.documentElement.setAttribute(
+                "data-theme",
+                nextTheme
+            );
+
+            localStorage.setItem("app_theme", nextTheme);
+
+            darkBtn.textContent =
+                nextTheme === "dark" ? "☀️" : "🌙";
         });
     }
 
     await initApp();
 
     const select = document.getElementById("configPresetSelect");
+
     if (select) {
-        select.addEventListener("change", (e) => {
-            if (e.target.value === "site.config.json") {
-                initApp();
-            } else {
-                switchTheme(e.target.value);
-            }
+        select.addEventListener("change", async (event) => {
+            await switchTheme(event.target.value);
         });
     }
 
-    document.querySelectorAll(".btn-lang").forEach((btn) => {
-        btn.addEventListener("click", () => {
-            setLanguage(btn.getAttribute("data-lang"));
+    document.querySelectorAll(".btn-lang").forEach((button) => {
+        button.addEventListener("click", async () => {
+            await setLanguage(button.getAttribute("data-lang"));
         });
     });
 
     const navToggle = document.getElementById("navToggle");
     const navMenu = document.getElementById("navMenu");
+
     if (navToggle && navMenu) {
         navToggle.addEventListener("click", () => {
             navMenu.classList.toggle("active");
         });
+
         navMenu.querySelectorAll(".nav-link, .btn").forEach((item) => {
-            item.addEventListener("click", () => navMenu.classList.remove("active"));
+            item.addEventListener("click", () => {
+                navMenu.classList.remove("active");
+            });
         });
     }
-    const productModal = document.getElementById("productModal");
-    const productModalClose = document.getElementById("productModalClose");
-    const productModalOverlay = document.getElementById("productModalOverlay");
 
-    function closeProductModal() {
-        if (productModal) {
-            productModal.classList.remove("active");
-            document.body.style.overflow = "";
-        }
+    const modalClose = document.getElementById("productModalClose");
+    const modalOverlay = document.getElementById("productModalOverlay");
+
+    if (modalClose) {
+        modalClose.addEventListener("click", closeProductModal);
     }
 
-    if (productModalClose) {
-        productModalClose.addEventListener("click", closeProductModal);
+    if (modalOverlay) {
+        modalOverlay.addEventListener("click", closeProductModal);
     }
 
-    if (productModalOverlay) {
-        productModalOverlay.addEventListener("click", closeProductModal);
-    }
-
-    document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape") {
-            closeProductModal();
-        }
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") closeProductModal();
     });
 });

@@ -1,3 +1,9 @@
+
+/* =========================================
+   1. CONTAINER
+   Dung chung cho cac thuong hieu
+   ========================================= */
+
 .container {
     width: 100%;
     max-width: 1200px;
@@ -7,7 +13,14 @@
     padding-right: clamp(1rem, 4vw, 2rem);
 }
 
+/* =========================================
+   2. MOBILE: DUOI 768PX
+   ========================================= */
+
 @media (max-width: 767.98px) {
+
+    /* PRODUCT MODAL */
+
     .product-modal {
         padding: 15px;
     }
@@ -15,9 +28,7 @@
     .product-modal-content {
         grid-template-columns: 1fr;
         gap: 20px;
-
         padding: 25px;
-
         max-height: 92vh;
     }
 
@@ -29,9 +40,22 @@
         font-size: 24px;
     }
 
+    /* STORY */
+
     .story-title {
         white-space: normal;
     }
+
+    .story-card {
+        padding: 2.5rem 1.25rem;
+    }
+
+    .story-stats-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    /* BRAND LOGO */
 
     .brand-logo img {
         width: 36px;
@@ -42,6 +66,8 @@
         font-size: 14px;
     }
 
+    /* DEMO SWITCHER */
+
     .demo-switcher-bar {
         padding: 0.5rem 0.75rem;
     }
@@ -51,6 +77,8 @@
         flex-wrap: wrap;
         gap: 0.5rem;
     }
+
+    /* HEADER / NAVIGATION */
 
     .header {
         position: relative;
@@ -69,11 +97,14 @@
         top: 100%;
         left: 0;
         width: 100%;
+
         background-color: var(--bg-surface);
         flex-direction: column;
+
         padding: 1.5rem;
         box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
         border-top: 1px solid var(--border-color);
+
         gap: 1.1rem;
         z-index: 999;
     }
@@ -88,50 +119,38 @@
         text-align: center;
     }
 
-    .hero-section {
-        padding: 3.5rem 0 2.5rem;
-    }
-
-    .hero-wrapper {
-        display: flex;
-        flex-direction: column-reverse;
-        text-align: center;
-        gap: 2rem;
-    }
-
-    .hero-buttons {
-        display: flex;
-        flex-direction: column;
-        gap: 0.75rem;
-    }
-
-    .story-card {
-        padding: 2.5rem 1.25rem;
-    }
-
-    .story-stats-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
+    /* PRODUCT CATEGORIES */
 
     .grid-categories {
         grid-template-columns: 1fr;
         gap: 1.25rem;
     }
 
+    /* BEFORE / AFTER */
+
     .before-after-grid {
         grid-template-columns: 1fr;
         gap: 1.25rem;
     }
 
+    /* FOOTER */
+
     .footer-content {
+        display: flex;
         flex-direction: column;
         text-align: center;
         gap: 1.5rem;
     }
 }
 
+/* =========================================
+   3. TABLET / DESKTOP: TU 768PX
+   ========================================= */
+
 @media (min-width: 768px) {
+
+    /* NAVIGATION */
+
     .nav-toggle-btn {
         display: none;
     }
@@ -147,18 +166,7 @@
         gap: 1.5rem;
     }
 
-    .hero-wrapper {
-        display: grid;
-        grid-template-columns: 1.15fr 1fr;
-        align-items: center;
-        gap: 3.5rem;
-    }
-
-    .hero-buttons {
-        display: flex;
-        flex-direction: row;
-        gap: 1.2rem;
-    }
+    /* STORY */
 
     .story-stats-grid {
         display: grid;
@@ -166,11 +174,15 @@
         gap: 2rem;
     }
 
+    /* PRODUCT CATEGORIES */
+
     .grid-categories {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 2rem;
     }
+
+    /* BEFORE / AFTER */
 
     .before-after-grid {
         display: grid;
@@ -178,9 +190,34 @@
         gap: 2rem;
     }
 
+    /* FOOTER */
+
     .footer-content {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
+    }
+}
+
+/* =========================================
+   4. TABLET: 768PX - 991PX
+   ========================================= */
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+    .header-content {
+        gap: 16px;
+    }
+
+    .nav-menu {
+        gap: 0.75rem;
+    }
+
+    .nav-link {
+        font-size: 0.85rem;
+    }
+
+    .grid-categories {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
