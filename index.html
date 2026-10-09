@@ -14,6 +14,7 @@
     <aside class="demo-switcher-bar">
         <div class="switcher-group">
             <label for="configPresetSelect">Giao diện:</label>
+
             <select id="configPresetSelect" class="switcher-select">
                 <option value="site.config.json">TPL - The Pretty Life</option>
                 <option value="punevie.config.json">Punévie</option>
@@ -21,67 +22,172 @@
             </select>
 
             <div class="lang-switch-box">
-                <button type="button" class="btn-lang active" data-lang="vi">VIỆT NAM</button>
-                <button type="button" class="btn-lang" data-lang="en">ENGLISH</button>
+                <button
+                    type="button"
+                    class="btn-lang active"
+                    data-lang="vi">
+                    VIỆT NAM
+                </button>
+
+                <button
+                    type="button"
+                    class="btn-lang"
+                    data-lang="en">
+                    ENGLISH
+                </button>
             </div>
 
-            <button type="button" id="darkModeBtn" class="btn-icon" title="Đổi chế độ Sáng/Tối">
+            <button
+                type="button"
+                id="darkModeBtn"
+                class="btn-icon"
+                title="Đổi chế độ Sáng/Tối">
                 🌙
             </button>
 
-            <a href="admin.html" class="btn-admin-link" title="Đến trang quản trị">Admin</a>
+            <a
+                href="admin.html"
+                class="btn-admin-link"
+                title="Đến trang quản trị">
+                Admin
+            </a>
         </div>
     </aside>
 
     <header class="header">
         <div class="container header-content">
-            <a href="#" class="brand-logo" id="brand-logo">
+
+            <a href="#hero" class="brand-logo" id="brand-logo">
                 <span class="logo-text">TPL - The Pretty Life</span>
             </a>
 
-            <button class="nav-toggle-btn" id="navToggle" aria-label="Mở menu">
+            <button
+                type="button"
+                class="nav-toggle-btn"
+                id="navToggle"
+                aria-label="Mở menu">
                 ☰
             </button>
 
             <nav class="nav-menu" id="navMenu">
-                <a href="#hero" class="nav-link" data-i18n="nav_home">Trang chủ</a>
-                <a href="#about" class="nav-link" id="navAboutLink" data-i18n="nav_about">Giới thiệu</a>
-                <a href="#products" class="nav-link" data-i18n="nav_products">Sản phẩm</a>
-                <a href="#before-after" class="nav-link" id="navBeforeAfterLink" data-i18n="nav_before_after">Hiệu
-                    quả</a>
-                <a href="#contact" class="nav-link" data-i18n="nav_contact">Liên hệ</a>
-                <a href="#contact" class="btn btn-primary nav-cta" data-i18n="btn_consult">Tư vấn chọn dầu gội</a>
+
+                <a
+                    href="#hero"
+                    class="nav-link"
+                    data-i18n="nav_home">
+                    Trang chủ
+                </a>
+
+                <a
+                    href="#about"
+                    class="nav-link"
+                    id="navAboutLink"
+                    data-i18n="nav_about">
+                    Giới thiệu
+                </a>
+
+                <a
+                    href="#products"
+                    class="nav-link"
+                    data-i18n="nav_products">
+                    Sản phẩm
+                </a>
+
+                <a
+                    href="#before-after"
+                    class="nav-link"
+                    id="navBeforeAfterLink"
+                    data-i18n="nav_before_after">
+                    Hiệu quả
+                </a>
+
+                <a
+                    href="#contact"
+                    class="nav-link"
+                    data-i18n="nav_contact">
+                    Liên hệ
+                </a>
+
+                <a
+                    href="#contact"
+                    class="btn btn-primary nav-cta"
+                    data-i18n="btn_consult">
+                    Tư vấn chọn sản phẩm
+                </a>
+
             </nav>
         </div>
     </header>
 
     <main>
+
         <section id="hero" class="hero-section"></section>
+
         <section id="about" class="section story-section">
             <div class="container">
                 <div class="story-card">
-                    <span class="story-badge" data-i18n="story_badge">Ký Ức & Nguồn Cội</span>
-                    <h2 class="story-title" data-i18n="story_title">Kế thừa bí quyết dưỡng tóc cổ truyền từ bàn tay mẹ
+
+                    <span
+                        class="story-badge"
+                        data-i18n="story_badge">
+                        Câu chuyện thương hiệu
+                    </span>
+
+                    <h2
+                        class="story-title"
+                        data-i18n="story_title">
+                        Câu chuyện của chúng tôi
                     </h2>
-                    <p class="story-desc" data-i18n="story_desc">
-                        Từ thuở xưa bên mái hiên nhà, mùi bồ kết nướng trên than hồng cùng vỏ bưởi, củ sả đã nuôi dưỡng
-                        mái tóc đen mượt óng ả của phụ nữ Việt. TPL kế thừa trọn vẹn tinh hoa mộc mạc ấy, kết hợp công
-                        nghệ chiết xuất hiện đại để mang đến giải pháp chăm sóc tóc dịu lành, thuần khiết.
+
+                    <p
+                        class="story-desc"
+                        data-i18n="story_desc">
                     </p>
 
                     <div class="story-stats-grid">
+
                         <div class="stat-item">
-                            <span class="stat-num" data-i18n="story_stat1_num">100%</span>
-                            <span class="stat-text" data-i18n="story_stat1_label">Thảo mộc tự nhiên</span>
+                            <span
+                                class="stat-num"
+                                data-i18n="story_stat1_num">
+                                100%
+                            </span>
+
+                            <span
+                                class="stat-text"
+                                data-i18n="story_stat1_label">
+                                Thành phần được chọn lọc
+                            </span>
                         </div>
+
                         <div class="stat-item">
-                            <span class="stat-num" data-i18n="story_stat2_num">0%</span>
-                            <span class="stat-text" data-i18n="story_stat2_label">Silicon & Paraben</span>
+                            <span
+                                class="stat-num"
+                                data-i18n="story_stat2_num">
+                                0%
+                            </span>
+
+                            <span
+                                class="stat-text"
+                                data-i18n="story_stat2_label">
+                                Chăm sóc dịu nhẹ
+                            </span>
                         </div>
+
                         <div class="stat-item">
-                            <span class="stat-num" data-i18n="story_stat3_num">72h</span>
-                            <span class="stat-text" data-i18n="story_stat3_label">Lưu hương dịu ngọt</span>
+                            <span
+                                class="stat-num"
+                                data-i18n="story_stat3_num">
+                                72h
+                            </span>
+
+                            <span
+                                class="stat-text"
+                                data-i18n="story_stat3_label">
+                                Trải nghiệm sản phẩm
+                            </span>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -89,79 +195,182 @@
 
         <section id="products" class="section categories-section">
             <div class="container">
+
                 <div class="section-header">
-                    <h2 class="section-title" data-i18n="section_categories">Dòng Sản Phẩm Nổi Bật</h2>
-                    <p class="section-subtitle" data-i18n="section_categories_sub">Chăm sóc toàn diện từ da đầu, ngọn
-                        tóc cho tới hương thơm quyến rũ</p>
+
+                    <h2
+                        class="section-title"
+                        data-i18n="section_categories">
+                        Dòng sản phẩm nổi bật
+                    </h2>
+
+                    <p
+                        class="section-subtitle"
+                        data-i18n="section_categories_sub">
+                        Khám phá bộ sưu tập sản phẩm
+                    </p>
+
                 </div>
 
-                <div class="grid-categories" id="categoriesContainer">
+                <div
+                    id="productFilters"
+                    class="product-filters"
+                    role="group"
+                    aria-label="Lọc sản phẩm">
                 </div>
+
+                <div
+                    class="grid-categories"
+                    id="categoriesContainer">
+                </div>
+
             </div>
         </section>
 
-        <section id="before-after" class="section before-after-section">
+        <section
+            id="before-after"
+            class="section before-after-section">
+
             <div class="container">
+
                 <div class="section-header">
-                    <h2 class="section-title" data-i18n="section_before_after">Hiệu Quả Phục Hồi Sau 14 Ngày</h2>
-                    <p class="section-subtitle" data-i18n="section_ba_sub">Minh chứng thực tế từ khách hàng trải nghiệm
-                        liệu trình TPL</p>
+
+                    <h2
+                        class="section-title"
+                        data-i18n="section_before_after">
+                        Hiệu quả sản phẩm
+                    </h2>
+
+                    <p
+                        class="section-subtitle"
+                        data-i18n="section_ba_sub">
+                        Khám phá hành trình chăm sóc
+                    </p>
+
                 </div>
 
                 <div class="before-after-grid">
+
                     <div class="card ba-card">
-                        <div class="ba-tag tag-before" data-i18n="ba_tag_before">Trước khi dùng</div>
-                        <p data-i18n="ba_desc_before">Tóc khô xơ, chẻ ngọn, da đầu bết dầu và gãy rụng khi chải.</p>
+
+                        <div
+                            class="ba-tag tag-before"
+                            data-i18n="ba_tag_before">
+                            Trước khi dùng
+                        </div>
+
+                        <p data-i18n="ba_desc_before"></p>
+
                     </div>
+
                     <div class="card ba-card">
-                        <div class="ba-tag tag-after" data-i18n="ba_tag_after">Sau 14 ngày</div>
-                        <p data-i18n="ba_desc_after">Tóc tơi bồng óng ả, chân tóc chắc khỏe, giảm gãy rụng tới 85%.</p>
+
+                        <div
+                            class="ba-tag tag-after"
+                            data-i18n="ba_tag_after">
+                            Sau khi dùng
+                        </div>
+
+                        <p data-i18n="ba_desc_after"></p>
+
                     </div>
+
                 </div>
             </div>
         </section>
+
     </main>
+
     <div class="product-modal" id="productModal">
-        <div class="product-modal-overlay" id="productModalOverlay"></div>
+
+        <div
+            class="product-modal-overlay"
+            id="productModalOverlay">
+        </div>
 
         <div class="product-modal-content">
-            <button class="product-modal-close" id="productModalClose">&times;</button>
+
+            <button
+                type="button"
+                class="product-modal-close"
+                id="productModalClose"
+                aria-label="Đóng thông tin sản phẩm">
+                &times;
+            </button>
 
             <div class="product-modal-image">
-                <img id="modalProductImage" src="" alt="">
+                <img
+                    id="modalProductImage"
+                    src=""
+                    alt="">
             </div>
 
             <div class="product-modal-info">
+
                 <h2 id="modalProductName"></h2>
+
                 <p id="modalProductDesc"></p>
 
                 <div class="product-modal-detail">
-                    <h4 data-i18n="product_info"></h4>
+
+                    <h4 data-i18n="product_info">
+                        Thông tin sản phẩm
+                    </h4>
+
                     <p id="modalProductDetail"></p>
+
                 </div>
             </div>
+
         </div>
     </div>
 
     <footer id="contact" class="footer">
+
         <div class="container footer-content">
+
             <div class="footer-col">
-                <h3 id="footer-brand-name">TPL - The Pretty Life</h3>
-                <p>Thương hiệu chăm sóc tóc chuyên sâu từ thiên nhiên.</p>
+
+                <h3 id="footer-brand-name">
+                    TPL - The Pretty Life
+                </h3>
+
+                <p>
+                    Thương hiệu chăm sóc và làm đẹp.
+                </p>
+
             </div>
+
             <div class="footer-col">
-                <h4>Liên Hệ Với Chúng Tôi</h4>
-                <p>📍 Địa chỉ: <span id="footer-address"></span></p>
-                <p>📞 Hotline: <span id="footer-phone"></span></p>
-                <p>✉️ Email: <span id="footer-email"></span></p>
+
+                <h4>Liên hệ với chúng tôi</h4>
+
+                <p>
+                    📍 Địa chỉ:
+                    <span id="footer-address"></span>
+                </p>
+
+                <p>
+                    📞 Hotline:
+                    <span id="footer-phone"></span>
+                </p>
+
+                <p>
+                    ✉️ Email:
+                    <span id="footer-email"></span>
+                </p>
+
             </div>
+
         </div>
+
         <div class="footer-bottom text-center">
-            <p id="footer-copyright">© Bản quyền thuộc về TPL - 2026</p>
+
+            <p id="footer-copyright"></p>
+
         </div>
+
     </footer>
 
-
 </body>
-
 </html>

@@ -18,6 +18,11 @@
     "#FDA7DF",
     "#E84393"
   ],
+  "contact": {
+    "address": "120 Nguyễn Trãi, Phường Bến Thành, TP. Hồ Chí Minh",
+    "phone": "0775658359",
+    "email": "pvbeauty@gmail.com"
+  },
   "hero": {
     "combined_image": "assets/brand_2/images/banner-hero.png",
     "frame_color": "#FDE8EF"
@@ -26,21 +31,157 @@
       "btn_explore": "Khám phá sản phẩm dưỡng da",
       "btn_learn_more": "Khám phá câu chuyện",
       "btn_consult": "Tư vấn chăm sóc da",
+      "nav_before_after": "Quy trình dưỡng da",
+      "product_filters": [
+          {"id": "all", "name": "Tất cả"},
+          {"id": "cleanser", "name": "Sữa rửa mặt"},
+          {"id": "cream", "name": "Kem dưỡng"},
+          {"id": "serum", "name": "Serum"},
+          {"id": "mask", "name": "Mặt nạ"}
+      ],
       "section_categories": "Bộ Sưu Tập Dưỡng Da PUNÉVIE",
       "section_categories_sub": "Nâng niu làn da mỗi ngày cùng những sản phẩm chăm sóc dịu nhẹ",  
-
+      
+      "story_stat1_num": "Dịu nhẹ",
+      "story_stat1_label": "Nâng niu làn da mỗi ngày",
+      "story_stat2_num": "Cấp ẩm",
+      "story_stat2_label": "Cho da mềm mại, mịn màng",
+      "story_stat3_num": "Chăm sóc",
+      "story_stat3_label": "Yêu thương làn da của bạn",
       "story_badge": "Câu chuyện PUNÉVIE",
+      
+      "section_before_after": "Hành Trình Nâng Niu Làn Da",
+      "section_ba_sub": "Một làn da được yêu thương bắt đầu từ những bước chăm sóc dịu dàng mỗi ngày.",
+      "ba_tag_before": "01 · Thanh sạch dịu dàng",
+      "ba_desc_before": "Nhẹ nhàng làm sạch bụi bẩn, mang lại cảm giác thoáng nhẹ, mềm mại và sẵn sàng đón nhận những dưỡng chất tiếp theo.",
+      "ba_tag_after": "02 · Dưỡng nuôi trọn vẹn",
+      "ba_desc_after": "Bổ sung độ ẩm và chăm sóc làn da với serum, kem dưỡng cùng mặt nạ phù hợp, để mỗi khoảnh khắc dưỡng da đều trở nên thư thái.",
+
       "story_title": "Vẻ đẹp bắt đầu từ sự nâng niu",
-      "story_desc": "PUNÉVIE bắt đầu từ một suy nghĩ giản dị: giữa những bộn bề của cuộc sống, người phụ nữ đôi khi dành quá nhiều thời gian chăm lo cho mọi thứ xung quanh mà quên rằng bản thân cũng cần được yêu thương. Chúng tôi tin rằng chăm sóc làn da không chỉ là để trở nên xinh đẹp hơn, mà còn là khoảng thời gian riêng để mỗi người phụ nữ thư giãn và trân trọng chính mình. Lấy cảm hứng từ vẻ đẹp thanh lịch của hoa hồng, PUNÉVIE mang đến những sản phẩm chăm sóc da dịu nhẹ, từ sữa rửa mặt, serum đến kem dưỡng và mặt nạ, để mỗi bước dưỡng da đều trở thành một trải nghiệm dễ chịu. Bởi với PUNÉVIE, vẻ đẹp không nằm ở sự hoàn hảo, mà ở sự tự tin và cách mỗi người phụ nữ biết yêu thương chính mình mỗi ngày."
+      "story_desc": "PUNÉVIE bắt đầu từ một suy nghĩ giản dị: giữa những bộn bề của cuộc sống, người phụ nữ đôi khi dành quá nhiều thời gian chăm lo cho mọi thứ xung quanh mà quên rằng bản thân cũng cần được yêu thương. Chúng tôi tin rằng chăm sóc làn da không chỉ là để trở nên xinh đẹp hơn, mà còn là khoảng thời gian riêng để mỗi người phụ nữ thư giãn và trân trọng chính mình. Lấy cảm hứng từ vẻ đẹp thanh lịch của hoa hồng, PUNÉVIE mang đến những sản phẩm chăm sóc da dịu nhẹ, từ sữa rửa mặt, serum đến kem dưỡng và mặt nạ, để mỗi bước dưỡng da đều trở thành một trải nghiệm dễ chịu. Bởi với PUNÉVIE, vẻ đẹp không nằm ở sự hoàn hảo, mà ở sự tự tin và cách mỗi người phụ nữ biết yêu thương chính mình mỗi ngày.",
+      
+      "categories": [
+        {
+          "id": "cleanser1",
+          "category": "cleanser",
+          "name": "Sữa Rửa Mặt Hoa Hồng",
+          "subtitle": "Gentle Rose Cleanser",
+          "image": "assets/brand_2/images/cleanser1.png",
+          "desc": "Làm sạch dịu nhẹ, cho da mềm mại.",
+          "detail": "Gel rửa mặt hoa hồng giúp loại bỏ bụi bẩn và làm sạch da nhẹ nhàng. Phù hợp với bước làm sạch hằng ngày, đặc biệt khi làn da cần được nâng niu.",
+          "color": "#ECA0B6"
+        },
+        {
+          "id": "cream1",
+          "category": "cream",
+          "name": "Kem Dưỡng Cấp Ẩm",
+          "subtitle": "Radiance Moisturizer Cream",
+          "image": "assets/brand_2/images/cream1.png",
+          "desc": "Cấp ẩm sâu, cho da căng mịn.",
+          "detail": "Kem dưỡng kết hợp hoa hồng và Ceramide, hỗ trợ duy trì độ ẩm, khóa ẩm và mang lại cảm giác mềm mượt cho làn da.",
+          "color": "#EF94AE"
+        },
+        {
+          "id": "cream2",
+          "category": "cream",
+          "name": "Kem Dưỡng Phục Hồi",
+          "subtitle": "Repair Cream",
+          "image": "assets/brand_2/images/cream2.png",
+          "desc": "Làm dịu và hỗ trợ phục hồi da.",
+          "detail": "Kem dưỡng với hoa hồng và Panthenol hỗ trợ chăm sóc hàng rào bảo vệ da, làm dịu cảm giác khô ráp và giúp da mềm mại hơn.",
+          "color": "#91AE91"
+        },
+        {
+          "id": "serum1",
+          "category": "serum",
+          "name": "Serum Dưỡng Sáng Da",
+          "subtitle": "Radiance Serum",
+          "image": "assets/brand_2/images/serum1.png",
+          "desc": "Hỗ trợ làm sáng và đều màu da.",
+          "detail": "Tinh chất hoa hồng và Niacinamide hỗ trợ dưỡng sáng, cải thiện vẻ ngoài đều màu, đồng thời bổ sung độ ẩm để da trông rạng rỡ hơn.",
+          "color": "#ED95AA"
+        },
+        {
+          "id": "serum2",
+          "category": "serum",
+          "name": "Serum Phục Hồi Da",
+          "subtitle": "Calm Repair Serum",
+          "image": "assets/brand_2/images/serum2.png",
+          "desc": "Làm dịu, cấp ẩm và chăm sóc da nhạy cảm.",
+          "detail": "Tinh chất Centella và Panthenol giúp bổ sung độ ẩm, làm dịu da và hỗ trợ chăm sóc hàng rào bảo vệ da.",
+          "color": "#87AC86"
+        },
+        {
+          "id": "mask1",
+          "category": "mask",
+          "name": "Mặt Nạ Cấp Ẩm Hoa Hồng",
+          "subtitle": "Hydra Bloom Mask",
+          "image": "assets/brand_2/images/mask1.png",
+          "desc": "Bổ sung độ ẩm, giúp da mềm mượt.",
+          "detail": "Mặt nạ kết hợp hoa hồng và Hyaluronic Acid, hỗ trợ cấp ẩm và mang lại cảm giác tươi mới, mềm mại cho làn da.",
+          "color": "#EFA7BC"
+        },
+        {
+          "id": "mask2",
+          "category": "mask",
+          "name": "Mặt Nạ Dưỡng Sáng",
+          "subtitle": "Radiance Rose Mask",
+          "image": "assets/brand_2/images/mask2.png",
+          "desc": "Chăm sóc làn da tươi sáng, đều màu.",
+          "detail": "Mặt nạ hoa hồng kết hợp Niacinamide, hỗ trợ dưỡng sáng và giúp da trông rạng rỡ, tươi tắn hơn.",
+          "color": "#ECA18F"
+        },
+        {
+          "id": "mask3",
+          "category": "mask",
+          "name": "Mặt Nạ Làm Dịu Phục Hồi",
+          "subtitle": "Calm Veil Mask",
+          "image": "assets/brand_2/images/mask3.png",
+          "desc": "Làm dịu và hỗ trợ phục hồi da.",
+          "detail": "Mặt nạ Cica và vitamin B5 giúp chăm sóc làn da khô, nhạy cảm, bổ sung độ ẩm và hỗ trợ làm dịu.",
+          "color": "#95B18D"
+        },
+        {
+          "id": "mask4",
+          "category": "mask",
+          "name": "Mặt Nạ Chăm Sóc Da Lão Hóa",
+          "subtitle": "Timeless Petal Mask",
+          "image": "assets/brand_2/images/mask4.png",
+          "desc": "Dưỡng ẩm, chăm sóc dấu hiệu tuổi tác.",
+          "detail": "Mặt nạ Lavender và Peptide hỗ trợ dưỡng ẩm, mang lại cảm giác thư giãn và chăm sóc làn da có dấu hiệu tuổi tác.",
+          "color": "#AB92C8"
+        }
+      ]
   },
   "en": {
       "btn_explore": "Explore Skincare",
       "btn_learn_more": "Discover Our Story",
       "btn_consult": "Skincare Consultation",
+      "nav_before_after": "Skincare Routine",
+      "product_filters": [
+          {"id": "all", "name": "All"},
+          {"id": "cleanser", "name": "Cleanser"},
+          {"id": "cream", "name": "Moisturizer"},
+          {"id": "serum", "name": "Serum"},
+          {"id": "mask", "name": "Face Masks"}
+      ],
       "section_categories": "PUNÉVIE Skincare Collection",
       "section_categories_sub": "Gentle skincare essentials to nourish your skin every day",
-
+      "story_stat1_num": "Gentle",
+      "story_stat1_label": "Everyday care for your skin",
+      "story_stat2_num": "Hydration",
+      "story_stat2_label": "For soft, smooth skin",
+      "story_stat3_num": "Self-Care",
+      "story_stat3_label": "Cherish your skin every day",
       "story_badge": "The PUNÉVIE Story",
+      
+      "section_before_after": "A Journey of Gentle Skincare",
+      "section_ba_sub": "Beautifully cared-for skin begins with gentle moments of self-love every day.",
+      "ba_tag_before": "01 · A Gentle Beginning",
+      "ba_desc_before": "Gently cleanse away impurities, leaving skin feeling fresh, soft and ready for the care that follows.",
+      "ba_tag_after": "02 · Nourish & Cherish",
+      "ba_desc_after": "Replenish moisture and nurture your skin with a suitable serum, moisturizer and face mask, turning your daily routine into a moment of calm.",
+
       "story_title": "Beauty Begins with Tender Care",
       "story_desc": "PUNÉVIE began with a simple thought: amid the demands of everyday life, women often spend so much time caring for everything around them that they forget they deserve the same love and attention. We believe skincare is not simply about looking more beautiful, but also about creating a personal moment to relax and appreciate oneself. Inspired by the timeless elegance of roses, PUNÉVIE offers gentle skincare products, from facial cleansers and serums to moisturizers and face masks, transforming every skincare routine into a comforting experience. At PUNÉVIE, beauty is not about perfection, but about confidence and the way every woman learns to cherish herself each day."
   }

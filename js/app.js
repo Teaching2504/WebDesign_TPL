@@ -3,10 +3,6 @@ let baseConfig = null;
 let activeConfig = null;
 let currentLang = "vi";
 
-/* =========================================
-   1. LOAD CSS
-   ========================================= */
-
 function loadCSS(href) {
     return new Promise((resolve) => {
         if (document.querySelector(`link[href="${href}"]`)) {
@@ -23,9 +19,6 @@ function loadCSS(href) {
     });
 }
 
-/* =========================================
-   2. APPLY THEME
-   ========================================= */
 
 function applyTheme(config) {
     const root = document.documentElement;
@@ -56,10 +49,6 @@ function applyTheme(config) {
         }
     });
 }
-
-/* =========================================
-   3. RENDER BRAND
-   ========================================= */
 
 function renderBrand(config) {
     const brandName = config.brand_name || "Thương hiệu";
@@ -104,12 +93,6 @@ function renderBrand(config) {
     if (email) email.textContent = contact.email || "";
     if (address) address.textContent = contact.address || "";
 }
-
-/* =========================================
-   4. HERO COMBINED
-   Mot anh ghep cho moi thuong hieu.
-   Duong dan va noi dung lay tu JSON.
-   ========================================= */
 
 function renderHero(config) {
     const heroSection = document.getElementById("hero");
@@ -187,10 +170,6 @@ function renderHero(config) {
     heroSection.appendChild(shell);
 }
 
-/* =========================================
-   5. STORY
-   ========================================= */
-
 function renderStory(config) {
     const title = document.querySelector(".story-title");
     const badge = document.querySelector(".story-badge");
@@ -206,9 +185,46 @@ function renderStory(config) {
     if (desc) desc.textContent = dict.story_desc || "";
 }
 
-/* =========================================
-   6. PRODUCT CATEGORIES
-   ========================================= */
+function renderProductFilters(categories, filters) {
+    const container = document.getElementById("productFilters");
+    if (!container) return;
+
+    container.replaceChildren();
+
+    if (!Array.isArray(categories) || !Array.isArray(filters)) return;
+
+    const available = filters.filter(filter =>
+        filter.id === "all" ||
+        categories.some(product => product.category === filter.id)
+    );
+
+    available.forEach(filter => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "product-filter-btn";
+        button.textContent = filter.name;
+
+        if (filter.id === "all") {
+            button.classList.add("active");
+        }
+
+        button.addEventListener("click", () => {
+            container.querySelectorAll(".product-filter-btn").forEach(btn => {
+                btn.classList.remove("active");
+            });
+
+            button.classList.add("active");
+
+            const filtered = filter.id === "all"
+                ? categories
+                : categories.filter(product => product.category === filter.id);
+
+            renderCategories(filtered, activeConfig?.category_colors);
+        });
+
+        container.appendChild(button);
+    });
+}
 
 function renderCategories(categories, customColors) {
     const container = document.getElementById("categoriesContainer");
@@ -259,10 +275,6 @@ function renderCategories(categories, customColors) {
     });
 }
 
-/* =========================================
-   7. PRODUCT MODAL
-   ========================================= */
-
 function openProductModal(product) {
     const modal = document.getElementById("productModal");
     if (!modal) return;
@@ -298,10 +310,6 @@ function closeProductModal() {
     }
 }
 
-/* =========================================
-   8. LANGUAGE
-   ========================================= */
-
 async function setLanguage(lang) {
     if (!baseConfig) return;
 
@@ -323,11 +331,15 @@ async function setLanguage(lang) {
     });
 
     const categories =
-        config[currentLang]?.categories ||
-        config.categories ||
-        baseConfig[currentLang]?.categories;
+        config[currentLang]?.categories ??
+        config.vi?.categories ??
+        config.categories ??
+        [];
 
     renderCategories(categories, config.category_colors);
+
+    const filters = config[currentLang]?.product_filters || [];
+    renderProductFilters(categories, filters);
 
     renderStory(config);
     renderHero(config);
@@ -341,10 +353,6 @@ async function setLanguage(lang) {
 
     localStorage.setItem("app_lang", currentLang);
 }
-
-/* =========================================
-   9. CHANGE BRAND
-   ========================================= */
 
 async function applyBrandConfig(config) {
     activeConfig = config;
@@ -375,10 +383,6 @@ async function switchTheme(themeFile) {
     }
 }
 
-/* =========================================
-   10. INIT APPLICATION
-   ========================================= */
-
 async function initApp() {
     try {
         const response = await fetch("config/site.config.json");
@@ -401,10 +405,6 @@ async function initApp() {
         console.error("Lỗi khởi tạo website:", error);
     }
 }
-
-/* =========================================
-   11. EVENTS
-   ========================================= */
 
 document.addEventListener("DOMContentLoaded", async () => {
     await loadCSS("css/reset.css");
