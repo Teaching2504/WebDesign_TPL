@@ -1,3 +1,8 @@
+
+/* =========================================
+   1. THEME VARIABLES
+   ========================================= */
+
 :root {
     --primary-color: #A8DDF2;
     --secondary-color: #E6F5FC;
@@ -9,14 +14,22 @@
     --text-muted: #648496;
     --border-color: rgba(168, 221, 242, 0.35);
     --footer-color: #84bae9;
-    --font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+    --font-family: system-ui, -apple-system,
+        BlinkMacSystemFont, "Segoe UI",
+        Roboto, Helvetica, Arial, sans-serif;
+
     --radius-sm: 10px;
     --radius-md: 18px;
     --radius-lg: 28px;
+
     --shadow-soft: 0 10px 30px rgba(107, 174, 207, 0.08);
     --shadow-card: 0 12px 32px rgba(35, 68, 87, 0.04);
 }
+
+/* =========================================
+   2. DARK MODE
+   ========================================= */
 
 [data-theme="dark"] {
     --bg-color: #1c6daa !important;
@@ -39,7 +52,6 @@
 [data-theme="dark"] h4,
 [data-theme="dark"] .logo-text,
 [data-theme="dark"] .nav-link,
-[data-theme="dark"] .hero-title,
 [data-theme="dark"] .story-title,
 [data-theme="dark"] .section-title,
 [data-theme="dark"] .cat-title {
@@ -48,7 +60,6 @@
 }
 
 [data-theme="dark"] p,
-[data-theme="dark"] .hero-desc,
 [data-theme="dark"] .story-desc,
 [data-theme="dark"] .cat-desc,
 [data-theme="dark"] .section-subtitle,
@@ -57,17 +68,10 @@
     color: var(--text-muted) !important;
 }
 
-[data-theme="dark"] .hero-badge,
 [data-theme="dark"] .story-badge {
     background-color: var(--secondary-color) !important;
     color: var(--accent-color) !important;
     border-color: var(--border-color) !important;
-}
-
-[data-theme="dark"] .floating-tag {
-    background: var(--bg-surface) !important;
-    color: var(--text-color) !important;
-    border: 1px solid var(--border-color) !important;
 }
 
 [data-theme="dark"] .stat-num {
@@ -104,18 +108,22 @@
     background-color: var(--secondary-color) !important;
 }
 
+/* =========================================
+   3. GLOBAL
+   ========================================= */
+
 * {
     box-sizing: border-box;
 }
 
 body {
+    margin: 0;
     background-color: var(--bg-color);
     color: var(--text-color);
     font-family: var(--font-family);
     line-height: 1.7;
-    margin: 0;
-    transition: all 0.3s ease;
     overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h1,
@@ -126,6 +134,10 @@ h3,
     font-weight: 700;
     letter-spacing: -0.02em;
 }
+
+/* =========================================
+   4. DEMO SWITCHER
+   ========================================= */
 
 .demo-switcher-bar {
     position: sticky;
@@ -143,6 +155,7 @@ h3,
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    flex-wrap: wrap;
     gap: 0.85rem;
     font-size: 0.85rem;
     color: var(--bg-color);
@@ -162,40 +175,6 @@ h3,
     background: var(--text-color);
     padding: 2px;
     border-radius: 8px;
-}
-
-.hero-section {
-    position: relative;
-    overflow: hidden;
-    padding: 5rem 0 4rem;
-    background: var(--bg-color);
-}
-
-.hero-section::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-
-    background-image: var(--hero-bg-image);
-    background-size: 100% auto;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    opacity: var(--hero-bg-opacity, 0.9);
-    filter: blur(var(--hero-bg-blur, 0px));
-
-    z-index: 0;
-    pointer-events: none;
-}
-
-.hero-wrapper {
-    position: relative;
-    z-index: 1;
-
-    display: grid;
-    grid-template-columns: 1.15fr 1fr;
-    align-items: center;
-    gap: 3.5rem;
 }
 
 .btn-lang {
@@ -231,6 +210,10 @@ h3,
     border-left: 1px solid var(--text-color);
 }
 
+/* =========================================
+   5. HEADER
+   ========================================= */
+
 .header {
     background: var(--bg-color);
     border-bottom: 1px solid var(--border-color);
@@ -248,6 +231,7 @@ h3,
     text-decoration: none;
     color: var(--text-color);
     display: flex;
+    align-items: center;
     gap: 8px;
 }
 
@@ -258,7 +242,6 @@ h3,
     flex-shrink: 0;
     filter: drop-shadow(0 3px 5px rgba(35, 68, 87, 0.25));
 }
-
 
 .logo-text {
     font-size: 1.6rem;
@@ -290,6 +273,10 @@ h3,
     color: var(--accent-color);
 }
 
+/* =========================================
+   6. BUTTONS
+   ========================================= */
+
 .btn {
     display: inline-flex;
     align-items: center;
@@ -305,7 +292,11 @@ h3,
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--third-color), var(--primary-color));
+    background: linear-gradient(
+        135deg,
+        var(--third-color),
+        var(--primary-color)
+    );
     color: #173747;
     box-shadow: 0 6px 18px rgba(168, 221, 242, 0.5);
 }
@@ -313,7 +304,6 @@ h3,
 .btn-primary:hover {
     transform: translateY(-2px);
     box-shadow: 0 10px 24px rgba(168, 221, 242, 0.7);
-    background: linear-gradient(135deg, var(--third-color), var(--primary-color));
 }
 
 .btn-outline {
@@ -326,77 +316,141 @@ h3,
     background: var(--secondary-color);
 }
 
+/* =========================================
+   7. HERO COMBINED - WHITE LABEL
+   ========================================= */
 
-.hero-badge {
-    display: inline-block;
-    padding: 0.4rem 1.1rem;
-    background-color: var(--secondary-color);
-    color: var(--text-color);
-    font-size: 0.85rem;
-    font-weight: 600;
-    border-radius: 9999px;
-    margin-bottom: 1.2rem;
-    border: 1px solid var(--border-color);
-}
-
-.hero-title {
-    font-size: clamp(2.3rem, 4.5vw, 3.6rem);
-    line-height: 1.2;
-    margin: 0.5rem 0 1.5rem;
-}
-
-.hero-desc {
-    font-size: 1.15rem;
-    color: var(--text-muted);
-    margin-bottom: 2.2rem;
-}
-
-.hero-buttons {
-    display: flex;
-    gap: 1.2rem;
-}
-
-.hero-image-card {
+#hero.hero-section {
     position: relative;
-    border-radius: var(--radius-lg);
     overflow: hidden;
-    box-shadow: var(--shadow-card);
-    background: linear-gradient(135deg, var(--secondary-color), var(--bg-surface));
-    min-height: 380px;
+    padding: 12px 0 36px;
+    background: var(--bg-color);
+}
+
+#hero .hero-combined-shell {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: var(--hero-frame-bg, var(--secondary-color));
     border: 1px solid var(--border-color);
+    border-radius: 32px;
 }
 
-.hero-image-card img {
+#hero .hero-combined-image-wrap {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
+    overflow: hidden;
+    border-radius: 24px;
+    background: var(--hero-frame-bg, var(--secondary-color));
 }
 
-.hero-image-card:hover img {
-    transform: scale(1.03);
+#hero .hero-combined-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 24px;
+    transform: none;
 }
 
-.floating-tag {
-    position: absolute;
-    bottom: 1.5rem;
-    left: 1.5rem;
-    background: rgba(255, 255, 255, 0.92);
-    backdrop-filter: blur(8px);
-    color: #1e3b4d;
-    padding: 0.6rem 1.2rem;
-    border-radius: var(--radius-sm);
-    font-weight: 600;
-    font-size: 0.85rem;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+#hero .hero-combined-actions {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 67%;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: -25px;
+    padding: 0 12px;
 }
+
+#hero .hero-combined-actions .btn {
+    min-width: 0;
+    padding: 13px 22px;
+    text-align: center;
+}
+
+#hero .hero-combined-fallback {
+    padding: 55px 24px 65px;
+    text-align: center;
+}
+
+#hero .hero-combined-fallback h1 {
+    color: var(--text-color);
+    font-size: clamp(28px, 4vw, 48px);
+    margin-bottom: 14px;
+}
+
+#hero .hero-combined-fallback p {
+    color: var(--text-muted);
+}
+
+/* Chinh rieng vi tri hai nut PUNEVIE */
+body.brand-punevie #hero .hero-combined-actions {
+    width: 53%;
+    transform: translateX(5%);
+}
+
+@media (max-width: 767.98px) {
+    #hero .hero-combined-shell {
+        padding: 12px;
+        border-radius: 22px;
+    }
+
+    #hero .hero-combined-image-wrap,
+    #hero .hero-combined-image {
+        border-radius: 16px;
+    }
+
+    #hero .hero-combined-actions {
+        margin-top: -10px;
+        gap: 8px;
+        padding: 0 6px;
+    }
+
+    #hero .hero-combined-actions .btn {
+        padding: 10px 14px;
+        font-size: 13px;
+    }
+}
+
+/* =========================================
+   8. GENERAL SECTIONS
+   ========================================= */
 
 .section {
     padding: 5rem 0;
 }
 
+.section-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+.section-title {
+    font-size: 2.4rem;
+    margin-bottom: 0.6rem;
+}
+
+.section-subtitle {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+/* =========================================
+   9. BRAND STORY
+   ========================================= */
+
 .story-section {
-    background: linear-gradient(180deg, transparent 0%, var(--secondary-color) 50%, transparent 100%);
+    background: linear-gradient(
+        180deg,
+        transparent 0%,
+        var(--secondary-color) 50%,
+        transparent 100%
+    );
 }
 
 .story-card {
@@ -464,20 +518,9 @@ h3,
     font-weight: 500;
 }
 
-.section-header {
-    text-align: center;
-    margin-bottom: 3.5rem;
-}
-
-.section-title {
-    font-size: 2.4rem;
-    margin-bottom: 0.6rem;
-}
-
-.section-subtitle {
-    color: var(--text-muted);
-    font-size: 1.1rem;
-}
+/* =========================================
+   10. PRODUCT CATEGORIES
+   ========================================= */
 
 .grid-categories {
     display: grid;
@@ -525,6 +568,10 @@ h3,
     cursor: pointer;
 }
 
+/* =========================================
+   11. BEFORE / AFTER
+   ========================================= */
+
 .before-after-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -558,15 +605,17 @@ h3,
     color: var(--text-color);
 }
 
+/* =========================================
+   12. PRODUCT MODAL
+   ========================================= */
+
 .product-modal {
     position: fixed;
     inset: 0;
     z-index: 9999;
-
     display: none;
     align-items: center;
     justify-content: center;
-
     padding: 30px;
 }
 
@@ -577,7 +626,6 @@ h3,
 .product-modal-overlay {
     position: absolute;
     inset: 0;
-
     background: rgba(35, 68, 87, 0.55);
     backdrop-filter: blur(5px);
 }
@@ -585,24 +633,17 @@ h3,
 .product-modal-content {
     position: relative;
     z-index: 1;
-
     width: min(900px, 100%);
     max-height: 90vh;
-
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
-
     padding: 35px;
-
     overflow-y: auto;
-
     background: var(--bg-surface);
     border: 1px solid var(--border-color);
     border-radius: var(--radius-lg);
-
     box-shadow: 0 25px 70px rgba(35, 68, 87, 0.25);
-
     animation: productModalShow 0.25s ease;
 }
 
@@ -622,23 +663,16 @@ h3,
     position: absolute;
     top: 15px;
     right: 18px;
-
     width: 38px;
     height: 38px;
-
     border: none;
     border-radius: 50%;
-
     background: var(--secondary-color);
     color: var(--text-color);
-
     font-size: 26px;
     line-height: 1;
-
     cursor: pointer;
-
     z-index: 2;
-
     transition: 0.2s ease;
 }
 
@@ -651,20 +685,15 @@ h3,
     display: flex;
     align-items: center;
     justify-content: center;
-
     background: var(--secondary-color);
-
     border-radius: var(--radius-md);
-
     overflow: hidden;
 }
 
 .product-modal-image img {
     width: 100%;
     max-height: 480px;
-
     object-fit: cover;
-
     display: block;
 }
 
@@ -676,17 +705,13 @@ h3,
 
 .product-modal-info h2 {
     margin: 0 0 15px;
-
     color: var(--text-color);
-
     font-size: 30px;
 }
 
-.product-modal-info>p {
+.product-modal-info > p {
     margin-bottom: 25px;
-
     color: var(--text-muted);
-
     font-size: 16px;
     line-height: 1.8;
 }
@@ -694,25 +719,24 @@ h3,
 .product-modal-detail {
     padding: 18px;
     margin-bottom: 25px;
-
     background: var(--secondary-color);
-
     border-radius: var(--radius-md);
 }
 
 .product-modal-detail h4 {
     margin: 0 0 8px;
-
     color: var(--text-color);
 }
 
 .product-modal-detail p {
     margin: 0;
-
     color: var(--text-muted);
-
     line-height: 1.7;
 }
+
+/* =========================================
+   13. FOOTER
+   ========================================= */
 
 .footer {
     background: var(--footer-color);
@@ -743,357 +767,9 @@ h3,
     font-size: 0.92rem;
 }
 
-/* ===== PUNEVIE HERO - KHONG ANH HUONG BRAND KHAC ===== */
-
-body.brand-punevie .hero-section {
-    background: #FFF8FA;
-    --hero-bg-image: none;
-}
-
-/* Loai bo nen logo TPL */
-body.brand-punevie .hero-section::before {
-    display: none !important;
-    content: none !important;
-    background: none !important;
-}
-
-/* Hai anh can doi */
-body.brand-punevie .hero-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-    align-items: center;
-}
-
-/* An phan chu TPL */
-body.brand-punevie .hero-text {
-    display: none;
-}
-
-/* Banner ben trai */
-body.brand-punevie #punevie-hero-banner {
-    display: block;
-    width: 100%;
-    min-width: 0;
-}
-
-body.brand-punevie #punevie-left-image {
-    display: block;
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-    border-radius: 18px;
-}
-
-body.brand-punevie .hero-media {
-    min-width: 0;
-}
-
-body.brand-punevie .hero-image-card {
-    min-height: 0;
-    aspect-ratio: 16 / 9;
-    border-radius: 18px;
-    overflow: hidden;
-}
-
-body.brand-punevie #hero-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-body.brand-punevie .hero-media .floating-tag {
-    display: none;
-}
-
-@media (max-width: 767.98px) {
-    body.brand-punevie .hero-wrapper {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-}
-
-body.brand-punevie .hero-wrapper {
-    background: #efd1db;          
-    border: 1px solid #e5b8c8;
-    border-radius: 32px;
-    padding: 22px;
-    display: flex;
-    gap: 24px;
-    align-items: center;
-    overflow: hidden;
-    box-sizing: border-box;
-    margin-top: -28px;           
-}
-
-body.brand-punevie .hero-section {
-    padding-top: 30px !important;   
-    padding-bottom: 70px;
-}
-
-body.brand-punevie #punevie-hero-banner {
-    flex: 1.15;                    
-    max-width: 50%;
-}
-
-body.brand-punevie .hero-media {
-    flex: 1;
-    max-width: 50%;
-}
-
-body.brand-punevie #punevie-left-image,
-body.brand-punevie #hero-image {
-    width: 100%;
-    display: block;
-    border-radius: 24px;
-    object-fit: cover;
-}
-
-body.brand-punevie #punevie-left-image {
-    min-height: 330px;             
-}
-
-body.brand-punevie .hero-image-card {
-    background: transparent;
-    box-shadow: none;
-    padding: 0;
-    border-radius: 24px;
-}
-
-@media (max-width: 991px) {
-    body.brand-punevie .hero-wrapper {
-        flex-direction: column;
-        padding: 20px;
-    }
-
-    body.brand-punevie #punevie-hero-banner,
-    body.brand-punevie .hero-media {
-        max-width: 100%;
-        width: 100%;
-    }
-
-    body.brand-punevie #punevie-left-image {
-        min-height: auto;
-    }
-}
-
-.punevie-hero-actions {
-    display: none;
-}
-
-body.brand-punevie .hero-wrapper {
-    flex-wrap: wrap;
-}
-
-body.brand-punevie .punevie-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 13px 25px;
-    border-radius: 999px;
-    font-size: 15px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-body.brand-punevie .punevie-btn:hover {
-    transform: translateY(-2px);
-}
-
-body.brand-punevie .punevie-btn-primary {
-    background: #CE829B;
-    color: #FFFFFF;
-}
-
-body.brand-punevie .punevie-btn-primary:hover {
-    background: #B96D88;
-}
-
-body.brand-punevie .punevie-btn-outline {
-    background: #FFF8FA;
-    color: #85485D;
-    border: 1.5px solid #CE829B;
-}
-
-body.brand-punevie .punevie-btn-outline:hover {
-    background: #F8E0E9;
-}
-
-@media (max-width: 767.98px) {
-    body.brand-punevie .punevie-hero-actions {
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    body.brand-punevie .punevie-btn {
-        width: 100%;
-    }
-}
-
-body.brand-punevie .hero-wrapper {
-    display: grid;
-    grid-template-columns: 1.05fr 1fr;
-    grid-template-rows: auto auto;
-    column-gap: 24px;
-    row-gap: 16px;
-    align-items: center;
-}
-
-body.brand-punevie #punevie-hero-banner {
-    grid-column: 1;
-    grid-row: 1;
-    width: 100%;
-    max-width: none;
-    min-width: 0;
-    flex: none;
-}
-
-body.brand-punevie .hero-media {
-    grid-column: 2;
-    grid-row: 1;
-    width: 100%;
-    max-width: none;
-    min-width: 0;
-    flex: none;
-}
-
-body.brand-punevie .punevie-hero-actions {
-    grid-column: 1;
-    grid-row: 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 12px;
-    width: 100%;
-    max-width: none;
-    margin-top: -40px;
-    padding: 0;
-    position: relative;
-    z-index: 2;
-}
-
-body.brand-punevie #punevie-left-image {
-    width: 100%;
-    height: auto;
-    min-height: 0;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-}
-
-@media (max-width: 767.98px) {
-    body.brand-punevie .hero-wrapper {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto;
-    }
-
-    body.brand-punevie #punevie-hero-banner {
-        grid-column: 1;
-        grid-row: 1;
-    }
-
-    body.brand-punevie .punevie-hero-actions {
-        grid-column: 1;
-        grid-row: 2;
-    }
-
-    body.brand-punevie .hero-media {
-        grid-column: 1;
-        grid-row: 3;
-    }
-}
-
-body.brand-punevie .hero-image-card {
-    aspect-ratio: auto;
-    height: auto;
-}
-
-body.brand-punevie #hero-image {
-    display: block;
-    width: 100%;
-    height: auto;
-    aspect-ratio: auto;
-    object-fit: contain;
-}
-
-
-@media (min-width: 992px) {
-
-    body.brand-punevie .hero-wrapper {
-        position: relative;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-        align-items: center;
-        gap: 24px;
-        padding: 22px;
-        background: #efd1db;
-        border-radius: 32px;
-    }
-
-    body.brand-punevie #punevie-hero-banner,
-    body.brand-punevie .hero-media {
-        width: 100%;
-        max-width: 100%;
-        min-width: 0;
-        grid-row: 1;
-    }
-
-    body.brand-punevie #punevie-hero-banner {
-        grid-column: 1;
-    }
-
-    body.brand-punevie .hero-media {
-        grid-column: 2;
-    }
-
-    body.brand-punevie #punevie-left-image {
-        width: 100%;
-        height: 360px;
-        min-height: 0;
-        aspect-ratio: auto;
-        object-fit: cover;
-        border-radius: 24px;
-    }
-
-    body.brand-punevie .hero-image-card {
-        width: 100%;
-        height: 360px;
-        min-height: 0;
-        aspect-ratio: auto;
-        overflow: hidden;
-        background: #f7e4e9;
-        border: none;
-        border-radius: 24px;
-    }
-
-    body.brand-punevie #hero-image {
-        width: 100%;
-        height: 100%;
-        aspect-ratio: auto;
-        object-fit: contain;
-        object-position: center;
-    }
-
-    body.brand-punevie .punevie-hero-actions {
-        position: absolute;
-        left: 5px;
-        bottom: 4px;
-        width: calc((100% - 68px) / 2);
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 12px;
-        z-index: 5;
-    }
-}
-body.brand-punevie .hero-section {
-    padding-bottom: 20px !important;
-}
+/* =========================================
+   14. PUNEVIE STORY
+   ========================================= */
 
 body.brand-punevie .story-section {
     padding-top: 20px;
@@ -1102,7 +778,6 @@ body.brand-punevie .story-section {
 body.brand-punevie .story-card {
     padding: 45px 48px;
 }
-
 
 body.brand-punevie .story-desc {
     max-width: 900px;
@@ -1114,8 +789,15 @@ body.brand-punevie .story-desc {
     margin: 0 auto;
 }
 
+/* =========================================
+   15. SMALL SCREEN ADJUSTMENTS
+   ========================================= */
 
-@media (max-width: 767px) {
+@media (max-width: 767.98px) {
+    .story-title {
+        white-space: normal;
+    }
+
     body.brand-punevie .story-card {
         padding: 30px 22px;
     }
@@ -1125,4 +807,17 @@ body.brand-punevie .story-desc {
     }
 }
 
+/* Thu gon khoang cach Hero va Story */
+#hero.hero-section {
+    padding-top: 0;
+    padding-bottom: 0;
+}
 
+.story-section.section {
+    padding-top: 0;
+    padding-bottom: 20px;
+}
+
+#hero + .story-section {
+    margin-top: -55px;
+}
