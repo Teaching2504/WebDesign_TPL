@@ -1,28 +1,28 @@
 {
-  "brand_id": "lcale_perfume_03",
+   "brand_id": "lcale_perfume_03",
   "brand_name": "L'Cale Perfume",
   "logo_url": "assets/brand_3/logos/logo3.png",
   "favicon_url": "",
+  "theme_name": "Yellow Honey",
   "theme": {
-    "primary_color": "#F4D88A",
-    "secondary_color": "#F8E7AE",
-    "third_color": "#FFFFF0",
-    "accent_color": "#824C2A",
-    "bg_color": "#FFF9EA",
-    "text_color": "#514633",
-    "footer_color": "#F4D88A",
-    "font_family": "'Nunito', 'Poppins', sans-serif"
-  },
-  "hero": {
-    "hero_image": "assets/brand_3/images/hero.png",
-    "background_opacity": 1,
-    "background_blur": "0px"
+    "primary_color": "#F3D37A",
+    "secondary_color": "#FEF7E3",
+    "third_color": "#E8C45A",
+    "accent_color": "#D4A936",
+    "bg_color": "#FFFCF5",
+    "text_color": "#423616",
+    "footer_color": "#E6C15A"
   },
   "contact": {
-    "phone": "0968411333",
+    "phone": "0900000000",
     "email": "hello@lcale.vn",
-    "address": "Số 1 Đường Võ Văn Tần, Phường Xuân Hòa, TP. HCM"
+    "address": "Số 1, Đường Võ Văn Tần, Phường Xuân Hòa, TP. HCM"
   },
+  "category_colors": [
+    "#F3D37A",
+    "#F9DF8E",
+    "#E5BE50"
+  ],
   "features": {
     "enable_about": true,
     "enable_before_after": true,
