@@ -3,25 +3,28 @@
   "brand_name": "L'Cale Perfume",
   "logo_url": "assets/brand_3/logos/logo3.png",
   "favicon_url": "",
-  "theme_name": "Yellow Honey",
   "theme": {
-    "primary_color": "#F3D37A",
-    "secondary_color": "#FEF7E3",
-    "third_color": "#E8C45A",
-    "accent_color": "#D4A936",
-    "bg_color": "#FFFCF5",
-    "text_color": "#423616",
-    "footer_color": "#E6C15A"
+    "primary_color": "#F4D88A",
+    "secondary_color": "#F8E7AE",
+    "third_color": "#FFFFF0",
+    "accent_color": "#824C2A",
+    "bg_color": "#FFF9EA",
+    "text_color": "#3A2F20",
+    "footer_color": "#F4D88A"
   },
   "contact": {
-    "phone": "0900000000",
+    "phone": "0968411555",
     "email": "hello@lcale.vn",
     "address": "Số 1, Đường Võ Văn Tần, Phường Xuân Hòa, TP. HCM"
   },
+  "hero": {
+    "combined_image": "assets/brand_3/images/banner-hero.png",
+    "frame_color": "#F4D88A"
+  },
   "category_colors": [
-    "#F3D37A",
-    "#F9DF8E",
-    "#E5BE50"
+    "#F4D88A",
+    "#F8E7AE",
+    "#FFFFF0"
   ],
   "features": {
     "enable_about": true,
@@ -30,63 +33,160 @@
   },
   "vi": {
     "nav_home": "Trang chủ",
-    "nav_about": "Câu chuyện",
-    "nav_products": "Mùi hương",
+    "nav_about": "Giới thiệu",
+    "nav_products": "Sản phẩm",
     "nav_before_after": "Xịt đúng cách",
     "nav_contact": "Liên hệ",
+    
     "btn_consult": "Nhận tư vấn mùi hương",
-    "hero_badge": "Mỗi ngày một phiên bản",
-    "hero_title": "HÔM NAY, BẠN MUỐN LÀ AI?",
-    "hero_desc": "Dịu dàng một chút. Rực rỡ một chút. Hay quyến rũ theo cách rất riêng?",
     "btn_explore": "Khám phá 4 phiên bản",
-    "btn_learn_more": "Câu chuyện của L'Cale",
+    "btn_learn_more": "Khám phá câu chuyện",
+    
     "product_info": "Thông tin mùi hương",
-    "story_badge": "Mùi hương ở lại",
-    "story_title": "CÓ NHỮNG THỨ KHÔNG NHÌN THẤY, NHƯNG NGƯỜI TA VẪN NHỚ.",
-    "story_desc": "Một ánh nhìn. Một bài hát. Một buổi chiều. Và một mùi hương. L'Cale tin rằng mùi hương không chỉ ở trên làn da. Nó ở lại trong ký ức của bạn.",
-    "story_stat1_num": "4",
-    "story_stat1_label": "Phiên bản cho mỗi tâm trạng",
-    "story_stat2_num": "10ml",
-    "story_stat2_label": "Chai mini để thử mùi",
-    "story_stat3_num": "50ml",
-    "story_stat3_label": "Chai đầy đặn mang theo",
-    "section_categories": "Bốn Tâm Trạng. Bốn Phiên Bản.",
-    "section_categories_sub": "Chọn mùi hương hợp với con người bạn hôm nay",
-    "section_before_after": "XỊT ĐÚNG CÁCH, HƯƠNG Ở LẠI",
+
+    "story_badge": "Lời thì thầm của hương",
+    "story_title": "Dấu Ấn Không Lời",
+    "story_desc": "Hãy nhớ lại một người từng đi ngang qua đời bạn. Có thể bạn đã quên tên, quên cả giọng nói, nhưng chỉ cần một thoáng hương quen thuộc trên phố, mọi thứ chợt hiện về rõ như mới hôm qua. Mùi hương có sức mạnh kỳ lạ ấy: nó không cần lên tiếng mà vẫn kể được cả một câu chuyện. L’Cale ra đời từ sự say mê đó. Chúng tôi nhận ra mỗi ngày bạn mang một dáng vẻ khác nhau, có buổi sáng nhẹ tênh như làn gió, có buổi chiều rộn ràng nắng gió, có tối hẹn hò lòng nhiều xao xuyến, và có những đêm khuya chỉ muốn yên lặng với chính mình. Vậy nên không thể chỉ có một mùi hương cho tất cả. Bốn phiên bản Pétale, Soleil, Rouge và Minuit được pha chế như bốn lời thì thầm khác nhau, để bạn chọn đúng lời thì thầm hợp với hôm nay. Và mỗi lần bạn bước ra khỏi một căn phòng, hương thơm sẽ ở lại thay bạn, lặng lẽ, dịu dàng, đủ để một ai đó mỉm cười và nhớ.",
+    
+    "story_stat1_num": "Tinh tế",
+    "story_stat1_label": "Chạm khẽ vào từng khoảnh khắc",
+    "story_stat2_num": "Lưu hương",
+    "story_stat2_label": "Để mùi hương theo bạn cả ngày",
+    "story_stat3_num": "Tự tin",
+    "story_stat3_label": "Tỏa sáng theo cách riêng của bạn",
+    
+    "section_categories": "Bộ Sưu Tập L’Cale Perfume",
+    "section_categories_sub": "Đánh thức vẻ đẹp tiềm ẩn và sự tự tin từ những tầng hương sâu lắng",
+
+    "section_before_after": "Xịt Đúng Cách, Lưu Hương Lâu Hơn",
     "section_ba_sub": "Vài bước nhỏ để mùi hương đi cùng bạn cả ngày",
     "ba_tag_before": "Xịt sai cách",
-    "ba_desc_before": "Xịt lên da khô, chà hai cổ tay vào nhau, hương đầu bay nhanh và đổi mùi.",
+    "ba_desc_before": "Xịt lên da khô, chà hai cổ tay vào nhau khiến hương đầu mau phai và đổi mùi. Xịt quá gần còn làm hương trở nên nồng gắt.",
     "ba_tag_after": "Xịt đúng cách",
-    "ba_desc_after": "Xịt lên da sạch, hơi ẩm, ở các điểm ấm như cổ tay, hõm cổ, sau tai, cách 15-20cm. Để hương tự khô.",
+    "ba_desc_after": "Xịt lên da sạch, hơi ẩm ở cổ tay, hõm cổ, sau tai, cách khoảng 15-20cm. Để hương tự khô, hương sẽ nở dịu dàng và ở lại lâu hơn.",
+    
     "categories": [
       {
-        "name": "CAL-01 · Pétale",
-        "color": "#F7CAC9",
+        "name": "CAL-01 - Pétale",
+        "color": "#C96B7A",
         "image": "assets/brand_3/images/cal1.png",
-        "desc": "Dịu dàng, trong trẻo. Hợp với buổi sáng.",
-        "detail": "Dịu dàng, trong trẻo. Thành phần: Hoa mẫu đơn, Lê, Vanilla. Hợp với: Buổi sáng. Dung tích: chai 50ml và chai mini 10ml."
+        "desc": "Nhẹ nhàng, trong trẻo, mở đầu ngày mới bình yên.",
+        "detail": "Mẫu đơn khẽ nở giữa vạt nắng sớm, quyện vị lê mọng nước và vani ấm vỗ về. Làn hương mỏng nhẹ, e ấp như sự thư thái đón chào ngày mới."
       },
       {
-        "name": "CAL-02 · Soleil",
+        "name": "CAL-02 - Soleil",
         "color": "#F5A65B",
         "image": "assets/brand_3/images/cal2.jpg",
-        "desc": "Rực rỡ, đầy năng lượng. Hợp với những buổi đi chơi.",
-        "detail": "Rực rỡ, đầy năng lượng. Thành phần: Hoa cam, Quýt. Hợp với: Đi chơi. Dung tích: chai 50ml và chai mini 10ml."
+        "desc": "Tươi sáng, rạng rỡ, tiếp năng lượng cho ngày đi học, đi làm.",
+        "detail": "Hoa cam và quýt bừng lên tràn đầy sức sống, mang lại cảm giác hứng khởi và sảng khoái. Rất hợp để đồng hành cùng bạn đến trường, đi làm hay xuống phố năng động."
       },
       {
-        "name": "CAL-03 · Rouge",
+        "name": "CAL-03 - Rouge",
         "color": "#C96B7A",
         "image": "assets/brand_3/images/cal3.jpg",
-        "desc": "Cuốn hút, ngọt ngào. Hợp với những buổi hẹn hò.",
-        "detail": "Cuốn hút, ngọt ngào. Thành phần: Anh đào, Hoa hồng, Hổ phách. Hợp với: Hẹn hò. Dung tích: chai 50ml và chai mini 10ml."
+        "desc": "Nữ tính, duyên dáng, gieo vương vấn cho buổi hẹn hò.",
+        "detail": "Anh đào chín mọng ôm trọn đóa hồng kiều diễm trên nền hổ phách ấm sâu. Một nét hương dịu dàng, đằm thắm và thanh lịch, đủ để người đối diện nhớ mãi sự duyên dáng ấy."
       },
       {
-        "name": "CAL-04 · Minuit",
+        "name": "CAL-04 - Minuit",
         "color": "#7A6A9C",
         "image": "assets/brand_3/images/cal4.jpg",
-        "desc": "Bí ẩn, trầm lắng. Hợp với những giờ sau 10 giờ tối.",
-        "detail": "Bí ẩn, trầm lắng. Thành phần: Quả sung, Hoa diên vĩ. Hợp với: Sau 10 giờ. Dung tích: chai 50ml và chai mini 10ml."
+        "desc": "Quyến rũ, tinh khôi, sang trọng và đầy cuốn hút.",
+        "detail": "Quả sung chín dịu quyện cùng hoa diên vĩ thanh tao, tỏa ra nét quyến rũ kiêu kỳ nhưng vẫn vô cùng sang xịn, trong sáng. Càng lại gần càng thấy thanh lịch và khó rời mắt."
+      },
+      {
+        "name": "SET-01 - Cute Mini",
+        "color": "#C96B7A",
+        "image": "assets/brand_3/images/set1.jpg",
+        "desc": "Ngọt ngào, dễ thương và đầy trong trẻo. Món quà vỗ về tâm hồn cho những ngày nắng nhẹ bình yên.",
+        "detail": "Hộp quà xinh xắn gửi gắm sự chăm chút tỉ mỉ với hương Pétale trong trẻo, nhành hoa khô nhỏ nhắn đáng yêu cùng bức thư tay gửi trọn tâm tư dịu dàng. Lựa chọn ngọt ngào để nhân đôi sự dễ thương và gieo nét bình yên cho cô ấy."
+      },
+      {
+        "name": "SET-02 - Elegance",
+        "color": "#7A6A9C",
+        "image": "assets/brand_3/images/set2.jpg",
+        "desc": "Tuyệt tác quà tặng sang trọng: Tinh tế, kiêu kỳ, gói trọn cảm xúc chân thành qua từng cành hoa khô và dòng thư tay trân quý.",
+        "detail": "Sự kết hợp tinh tế giữa hương Minuit quyến rũ, điểm xuyết chùm hoa khô nghệ thuật bền đẹp và lá thư tay chân thành. Hộp quà mang thiết kế sang xịn, chỉn chu, nâng tầm phong cách cho những dịp thực sự đặc biệt."
       }
     ]
-  }
+  },
+  "en": {
+    "nav_home": "Home",
+    "nav_about": "About",
+    "nav_products": "Products",
+    "nav_before_after": "How to Spray",
+    "nav_contact": "Contact",
+
+    "btn_consult": "Get Fragrance Advice",
+    "btn_explore": "Discover 4 Versions",
+    "btn_learn_more": "Discover Our Story",
+
+    "product_info": "Fragrance Details",
+
+    "story_badge": "The Whisper of Scent",
+    "story_title": "A Signature Without Words",
+    "story_desc": "Think of someone who once passed through your life. You may have forgotten their name, even their voice, yet one whiff of a familiar scent on the street and everything returns as vividly as yesterday. A fragrance holds that strange power: it never raises its voice, yet it tells a whole story. L’Cale was born from that fascination. We noticed that you wear a different self each day, light as a breeze in the morning, bright with sunshine in the afternoon, fluttering on a date night, and quiet with yourself in the late hours. So one scent could never be enough. The four versions Pétale, Soleil, Rouge and Minuit are blended as four different whispers, so you can choose the one that suits today. And every time you leave a room, your fragrance stays behind in your place, quiet and gentle, just enough for someone to smile and remember.",
+    
+    "story_stat1_num": "Refined",
+    "story_stat1_label": "A soft touch in every moment",
+    "story_stat2_num": "Lasting",
+    "story_stat2_label": "Keep your scent with you all day",
+    "story_stat3_num": "Confident",
+    "story_stat3_label": "Shine in a way that is only yours",
+    
+    "section_categories": "The L’Cale Perfume Collection",
+    "section_categories_sub": "Awaken your hidden beauty and confidence through deep, lingering layers of scent",
+    "section_before_after": "Spray Right, Make Your Scent Last Longer",
+    "section_ba_sub": "A few small steps to keep your scent with you all day",
+    "ba_tag_before": "The wrong way",
+    "ba_desc_before": "Spraying on dry skin, then rubbing your wrists together, makes the top notes fade fast and change. Spraying too close can also turn the scent harsh.",
+    "ba_tag_after": "The right way",
+    "ba_desc_after": "Spray on clean, slightly moist skin at the wrists, neck and behind the ears, about 15-20cm away. Let it dry naturally, and the scent will bloom softly and last longer.",
+    
+    "categories": [
+      {
+        "name": "CAL-01 - Pétale",
+        "color": "#C96B7A",
+        "image": "assets/brand_3/images/cal1.png",
+        "desc": "Gentle and clear, opening a peaceful new day.",
+        "detail": "Peony unfolds softly in a patch of early sunlight, blended with juicy pear and soothing warm vanilla. A light, shy veil of scent, like the calm of greeting a new day."
+      },
+      {
+        "name": "CAL-02 - Soleil",
+        "color": "#F5A65B",
+        "image": "assets/brand_3/images/cal2.jpg",
+        "desc": "Bright and radiant, a boost of energy for school and work days.",
+        "detail": "Orange blossom and mandarin burst with vitality, bringing a feeling of excitement and freshness. Perfect to accompany you to school, to work, or around the lively city."
+      },
+      {
+        "name": "CAL-03 - Rouge",
+        "color": "#C96B7A",
+        "image": "assets/brand_3/images/cal3.jpg",
+        "desc": "Feminine and graceful, leaving a lingering charm on date nights.",
+        "detail": "Ripe cherry wraps around an exquisite rose over a deep, warm amber base. A tender, elegant trail, enough for the one across from you to remember that grace for a long time."
+      },
+      {
+        "name": "CAL-04 - Minuit",
+        "color": "#7A6A9C",
+        "image": "assets/brand_3/images/cal4.jpg",
+        "desc": "Alluring, pure, luxurious and captivating.",
+        "detail": "Softly ripened fig meets refined iris, giving off a proud allure that stays luxurious and pure. The closer you come, the more elegant and hard to look away from it feels."
+      },
+      {
+        "name": "SET-01 - Cute Mini",
+        "color": "#C96B7A",
+        "image": "assets/brand_3/images/set1.jpg",
+        "desc": "Sweet, cute and full of clarity. A soul-soothing gift for peaceful, gently sunny days.",
+        "detail": "A charming gift box made with meticulous care, with the clear Pétale scent, a tiny dried flower sprig and a handwritten letter carrying gentle feelings. A sweet choice to double her cuteness and bring her a touch of calm."
+      },
+      {
+        "name": "SET-02 - Elegance",
+        "color": "#7A6A9C",
+        "image": "assets/brand_3/images/set2.jpg",
+        "desc": "A masterpiece of luxury gifting: refined, proud, wrapping sincere feelings in every dried flower stem and treasured handwritten note.",
+        "detail": "A refined pairing of the alluring Minuit scent, an artful bunch of lasting dried flowers and a heartfelt handwritten letter. The box is luxuriously and neatly designed, elevating the style of truly special occasions."
+      }
+    ]
+  },
+  "default_language": "vi"
 }
