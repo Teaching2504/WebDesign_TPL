@@ -11,6 +11,7 @@
     "accent_color": "#6BAECF",
     "bg_color": "#F8FCFE",
     "text_color": "#234457",
+    "text_muted": "#648496",
     "footer_color": "#84bae9",
     "font_family": "system-ui, -apple-system, sans-serif"
   },
@@ -61,42 +62,36 @@
     "categories": [
       {
         "name": "Dầu Gội Phục Hồi",
-        "color": "#A8DDF2",
         "image": "assets/brand_1/images/pro1.jpg",
         "desc": "Chiết xuất tinh dầu bưởi làm sạch sâu da đầu và ngăn rụng tóc.",
         "detail": "Công thức kết hợp tinh dầu bưởi, bồ kết và các chiết xuất thảo mộc tự nhiên, giúp làm sạch nhẹ nhàng da đầu, hỗ trợ giảm tình trạng tóc gãy rụng và mang lại cảm giác tóc chắc khỏe, mềm mượt hơn. Hương bưởi dịu nhẹ giúp mái tóc lưu lại cảm giác tươi mát sau khi gội."
       },
       {
         "name": "Dầu Xả Cấp Ẩm",
-        "color": "#94D2ED",
         "image": "assets/brand_1/images/pro2.jpg",
         "desc": "Bổ sung Keratin và Vitamin E giúp thân tóc suôn mượt óng ả.",
         "detail": "Kết hợp Keratin, Vitamin E cùng các thành phần dưỡng ẩm giúp bổ sung độ mềm mại cho thân tóc, hỗ trợ cải thiện tình trạng tóc khô xơ và rối. Công thức giúp tóc dễ chải, suôn mượt và giữ được vẻ óng ả tự nhiên sau mỗi lần sử dụng."
       },
       {
         "name": "Serum Kích Mọc Tóc",
-        "color": "#7EBFDF",
         "image": "assets/brand_1/images/pro3.jpg",
         "desc": "Tinh chất đậm đặc nuôi dưỡng nang tóc phát triển dày khỏe.",
         "detail": "Tinh chất cô đặc kết hợp chiết xuất bưởi, bồ kết và các thành phần thảo mộc tự nhiên, tập trung chăm sóc vùng chân tóc và da đầu. Sản phẩm hỗ trợ nuôi dưỡng tóc, giúp mái tóc trông dày khỏe, mềm mượt và giảm cảm giác khô xơ ở phần chân tóc."
       },
       {
         "name": "Serum Tóc Bạc Hà & Bồ Kết",
-        "color": "#6FB6D8",
         "image": "assets/brand_1/images/pro4.jpg",
         "desc": "Tinh chất bạc hà & bồ kết giúp chăm sóc chân tóc, hỗ trợ phục hồi tóc hư tổn.",
         "detail": "Serum tóc kết hợp bạc hà và bồ kết, giúp chăm sóc da đầu và chân tóc, hỗ trợ phục hồi mái tóc khô xơ, hư tổn. Công thức nhẹ nhàng mang lại cảm giác tươi mát, giúp tóc mềm mượt và chắc khỏe hơn."
       },
       {
         "name": "Dầu Gội Bạc Hà & Bồ Kết",
-        "color": "#82C5E5",
         "image": "assets/brand_1/images/pro5.jpg",
         "desc": "Làm sạch da đầu, giảm gãy rụng và giúp mái tóc mềm mượt tự nhiên.",
         "detail": "Công thức kết hợp bạc hà và bồ kết giúp làm sạch nhẹ nhàng da đầu, loại bỏ dầu thừa và bụi bẩn. Sản phẩm hỗ trợ giảm gãy rụng, mang lại cảm giác sạch thoáng và giúp mái tóc mềm mượt hơn sau mỗi lần gội."
       },
       {
         "name": "Dầu Xả Bạc Hà & Bồ Kết",
-        "color": "#9BD5EE",
         "image": "assets/brand_1/images/pro6.jpg",
         "desc": "Dưỡng tóc mềm mượt, giảm gãy rụng và chăm sóc tóc khô xơ.",
         "detail": "Dầu xả kết hợp bạc hà và bồ kết giúp cung cấp độ ẩm cho thân tóc, hỗ trợ cải thiện tình trạng tóc khô xơ và dễ rối. Công thức giúp tóc mềm mượt, dễ chải và giảm cảm giác xơ rối sau khi sử dụng."
@@ -136,42 +131,36 @@
     "categories": [
       {
         "name": "Hair Repair Shampoo",
-        "color": "#A8DDF2",
         "image": "assets/brand_1/images/pro1.jpg",
         "desc": "Pomelo essential oil deeply cleanses the scalp and helps reduce hair loss.",
         "detail": "Formulated with pomelo essential oil, soapberry and natural botanical extracts to gently cleanse the scalp, support healthier-looking hair and help reduce the appearance of breakage. Its delicate pomelo scent leaves the hair feeling fresh and refreshed after washing."
       },
       {
         "name": "Moisturizing Conditioner",
-        "color": "#94D2ED",
         "image": "assets/brand_1/images/pro2.jpg",
         "desc": "Enriched with Keratin and Vitamin E to leave hair smooth, soft and silky.",
         "detail": "Enriched with Keratin, Vitamin E and moisturizing ingredients to help soften dry, tangled hair and improve manageability. The nourishing formula leaves the hair smoother, softer and naturally glossy after each use."
       },
       {
         "name": "Hair Growth Serum",
-        "color": "#7EBFDF",
         "image": "assets/brand_1/images/pro3.jpg",
         "desc": "A concentrated formula that nourishes hair follicles for thicker, healthier hair.",
         "detail": "A concentrated botanical formula featuring pomelo, soapberry and natural herbal extracts to care for the scalp and hair roots. It helps nourish the hair, supports a fuller and healthier-looking appearance, and leaves the roots feeling refreshed and cared for."
       },
       {
         "name": "Mint & Soapberry Hair Serum",
-        "color": "#6FB6D8",
         "image": "assets/brand_1/images/pro4.jpg",
         "desc": "Mint and soapberry serum that nourishes the roots and helps restore damaged hair.",
         "detail": "A lightweight hair serum combining mint and soapberry extracts to care for the scalp and hair roots. It helps support damaged, dry hair while providing a refreshing sensation and leaving hair softer and healthier-looking."
       },
       {
         "name": "Mint & Soapberry Shampoo",
-        "color": "#82C5E5",
         "image": "assets/brand_1/images/pro5.jpg",
         "desc": "Gently cleanses the scalp, helps reduce breakage and leaves hair naturally smooth.",
         "detail": "Formulated with mint and soapberry extracts to gently cleanse the scalp and remove excess oil and impurities. The formula helps reduce the appearance of breakage while leaving the scalp feeling fresh and the hair soft and smooth."
       },
       {
         "name": "Mint & Soapberry Conditioner",
-        "color": "#9BD5EE",
         "image": "assets/brand_1/images/pro6.jpg",
         "desc": "Nourishes dry hair, helps reduce breakage and leaves hair soft and smooth.",
         "detail": "A nourishing conditioner combining mint and soapberry extracts to provide moisture and improve the feel of dry, tangled hair. It helps make hair softer, smoother and easier to comb after each use."

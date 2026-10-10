@@ -29,7 +29,7 @@ Ba thương hiệu giả tưởng do đội tự đặt (không dùng thương h
 | Thành viên | Vai trò |
 | --- | --- |
 | Nguyễn Thị Tuyết Trinh | Trưởng nhóm, quản lý dự án/ Code chính HTML, CSS, JS/ Code JSON brand 1 (TPL) |
-| (Họ) Kim Phụng | Lên ý tưởng và code JSON brand 2 (Punévie)/ Chỉnh sửa, bổ sung HTML, CSS, JS |
+|Dương Lê Kim Phụng | Lên ý tưởng và code JSON brand 2 (Punévie)/ Chỉnh sửa, bổ sung HTML, CSS, JS |
 | Lê Thị Cẩm Lệ | Lên ý tưởng và code JSON brand 3 (L'Cale Perfume) |
 
 Liên hệ trưởng nhóm: 2351010216trinh@ou.edu.vn

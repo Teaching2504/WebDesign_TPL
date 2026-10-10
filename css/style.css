@@ -26,7 +26,7 @@
     --bg-color: #29262D !important;
     --bg-surface: #38333C !important;
     --text-color: #F8F3F7 !important;
-    --text-muted: #D2C5D0 !important;
+    --text-muted: #948c93 !important;
     --border-color: rgba(255, 255, 255, 0.12) !important;
     --secondary-color: #403842 !important;
     --shadow-card: 0 12px 30px rgba(0, 0, 0, 0.15) !important;
@@ -99,6 +99,42 @@
     background-color: var(--secondary-color) !important;
 }
 
+[data-theme="dark"] .switcher-group {
+    color: var(--text-color) !important;
+}
+
+[data-theme="dark"] .btn-admin-link {
+    color: var(--text-color) !important;
+}
+
+[data-theme="dark"] .section,
+[data-theme="dark"] #hero.hero-section {
+    background-color: var(--bg-color);
+}
+
+[data-theme="dark"] .story-section {
+    background: none;
+}
+
+[data-theme="dark"] .demo-switcher-bar,
+[data-theme="dark"] .header {
+    background-color: var(--bg-surface) !important;
+}
+
+[data-theme="dark"] .btn-primary,
+[data-theme="dark"] .product-filter-btn.active {
+    color: #2B2430;
+}
+
+[data-theme="dark"] .btn-outline {
+    color: var(--text-color) !important;
+}
+
+[data-theme="dark"] #hero .hero-combined-shell {
+    background: var(--bg-surface) !important;
+}
+
+
 * {
     box-sizing: border-box;
 }
@@ -146,7 +182,7 @@ h3,
 
 .switcher-select {
     background: var(--text-color);
-    color: #fff;
+    color:var(--text-muted);
     border: 1px solid var(--text-color);
     padding: 0.35rem 0.8rem;
     border-radius: var(--radius-sm);
@@ -186,7 +222,7 @@ h3,
 }
 
 .btn-admin-link {
-    color: var(--primary-color);
+    color: var(--secondary-color);
     text-decoration: none;
     font-weight: 600;
     padding-left: 0.5rem;
@@ -267,11 +303,9 @@ h3,
 }
 
 .btn-primary {
-    background: linear-gradient(
-        135deg,
-        var(--third-color),
-        var(--primary-color)
-    );
+    background: linear-gradient(135deg,
+            var(--third-color),
+            var(--primary-color));
     color: #173747;
     box-shadow: 0 6px 18px rgba(168, 221, 242, 0.5);
 }
@@ -296,6 +330,8 @@ h3,
     overflow: hidden;
     padding: 12px 0 36px;
     background: var(--bg-color);
+    padding-top: 12px;
+    padding-bottom: 0;
 }
 
 #hero .hero-combined-shell {
@@ -402,12 +438,10 @@ h3,
 }
 
 .story-section {
-    background: linear-gradient(
-        180deg,
-        transparent 0%,
-        var(--secondary-color) 50%,
-        transparent 100%
-    );
+    background: linear-gradient(180deg,
+            transparent 0%,
+            var(--secondary-color) 50%,
+            transparent 100%);
 }
 
 .story-card {
@@ -519,6 +553,7 @@ h3,
     font-size: 0.95rem;
     display: inline-block;
     cursor: pointer;
+    color: var(--third-color) !important;
 }
 
 .before-after-grid {
@@ -654,7 +689,7 @@ h3,
     font-size: 30px;
 }
 
-.product-modal-info > p {
+.product-modal-info>p {
     margin-bottom: 25px;
     color: var(--text-muted);
     font-size: 16px;
@@ -740,17 +775,8 @@ body.brand-punevie .story-desc {
     }
 }
 
-#hero.hero-section {
-    padding-top: 0;
-    padding-bottom: 0;
-}
 
-.story-section.section {
-    padding-top: 0;
-    padding-bottom: 20px;
-}
-
-#hero + .story-section {
+#hero+.story-section {
     margin-top: -55px;
 }
 
@@ -806,7 +832,13 @@ body.brand-punevie .story-desc {
 }
 
 .story-section.section {
-    padding-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 20px;
+}
+
+
+#hero + .story-section {
+    margin-top: 12px;
 }
 
 .categories-section.section {
@@ -821,29 +853,12 @@ body.brand-punevie .story-desc {
     padding-top: 25px;
 }
 
-[data-theme="dark"] .section,
-[data-theme="dark"] #hero.hero-section {
-    background-color: var(--bg-color);
-}
 
-[data-theme="dark"] .story-section {
-    background: none;
-}
-
-[data-theme="dark"] .demo-switcher-bar,
-[data-theme="dark"] .header {
-    background-color: var(--bg-surface) !important;
-}
-
-[data-theme="dark"] .btn-primary,
-[data-theme="dark"] .product-filter-btn.active {
-    color: #2B2430;
-}
-
-[data-theme="dark"] .btn-outline {
-    color: var(--text-color) !important;
-}
-
-[data-theme="dark"] #hero .hero-combined-shell {
-    background: var(--bg-surface) !important;
+.demo-switcher-bar,
+.demo-switcher-bar *,
+.demo-switcher-bar select,
+.demo-switcher-bar option,
+.demo-switcher-bar button,
+.demo-switcher-bar a {
+    font-weight: 700 !important;
 }

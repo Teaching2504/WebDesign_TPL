@@ -4,13 +4,15 @@
   "logo_url": "assets/brand_3/logos/logo3.png",
   "favicon_url": "",
   "theme": {
-    "primary_color": "#F4D88A",
-    "secondary_color": "#F8E7AE",
-    "third_color": "#FFFFF0",
+    "primary_color": "#F6E0A0",
+    "secondary_color": "#FFFFF0",
+    "third_color": "#E8C45F",
     "accent_color": "#824C2A",
     "bg_color": "#FFF9EA",
     "text_color": "#3A2F20",
-    "footer_color": "#F4D88A"
+    "text_muted": "#806F5A",
+    "footer_color": "#F4D88A",
+    "font_family": "system-ui, -apple-system, sans-serif"
   },
   "contact": {
     "phone": "0968411555",
@@ -68,42 +70,36 @@
     "categories": [
       {
         "name": "CAL-01 - Pétale",
-        "color": "#C96B7A",
         "image": "assets/brand_3/images/cal1.png",
         "desc": "Nhẹ nhàng, trong trẻo, mở đầu ngày mới bình yên.",
         "detail": "Mẫu đơn khẽ nở giữa vạt nắng sớm, quyện vị lê mọng nước và vani ấm vỗ về. Làn hương mỏng nhẹ, e ấp như sự thư thái đón chào ngày mới."
       },
       {
         "name": "CAL-02 - Soleil",
-        "color": "#F5A65B",
         "image": "assets/brand_3/images/cal2.jpg",
         "desc": "Tươi sáng, rạng rỡ, tiếp năng lượng cho ngày đi học, đi làm.",
         "detail": "Hoa cam và quýt bừng lên tràn đầy sức sống, mang lại cảm giác hứng khởi và sảng khoái. Rất hợp để đồng hành cùng bạn đến trường, đi làm hay xuống phố năng động."
       },
       {
         "name": "CAL-03 - Rouge",
-        "color": "#C96B7A",
         "image": "assets/brand_3/images/cal3.jpg",
         "desc": "Nữ tính, duyên dáng, gieo vương vấn cho buổi hẹn hò.",
         "detail": "Anh đào chín mọng ôm trọn đóa hồng kiều diễm trên nền hổ phách ấm sâu. Một nét hương dịu dàng, đằm thắm và thanh lịch, đủ để người đối diện nhớ mãi sự duyên dáng ấy."
       },
       {
         "name": "CAL-04 - Minuit",
-        "color": "#7A6A9C",
         "image": "assets/brand_3/images/cal4.jpg",
         "desc": "Quyến rũ, tinh khôi, sang trọng và đầy cuốn hút.",
         "detail": "Quả sung chín dịu quyện cùng hoa diên vĩ thanh tao, tỏa ra nét quyến rũ kiêu kỳ nhưng vẫn vô cùng sang xịn, trong sáng. Càng lại gần càng thấy thanh lịch và khó rời mắt."
       },
       {
         "name": "SET-01 - Cute Mini",
-        "color": "#C96B7A",
         "image": "assets/brand_3/images/set1.jpg",
         "desc": "Ngọt ngào, dễ thương và đầy trong trẻo. Món quà vỗ về tâm hồn cho những ngày nắng nhẹ bình yên.",
         "detail": "Hộp quà xinh xắn gửi gắm sự chăm chút tỉ mỉ với hương Pétale trong trẻo, nhành hoa khô nhỏ nhắn đáng yêu cùng bức thư tay gửi trọn tâm tư dịu dàng. Lựa chọn ngọt ngào để nhân đôi sự dễ thương và gieo nét bình yên cho cô ấy."
       },
       {
         "name": "SET-02 - Elegance",
-        "color": "#7A6A9C",
         "image": "assets/brand_3/images/set2.jpg",
         "desc": "Tuyệt tác quà tặng sang trọng: Tinh tế, kiêu kỳ, gói trọn cảm xúc chân thành qua từng cành hoa khô và dòng thư tay trân quý.",
         "detail": "Sự kết hợp tinh tế giữa hương Minuit quyến rũ, điểm xuyết chùm hoa khô nghệ thuật bền đẹp và lá thư tay chân thành. Hộp quà mang thiết kế sang xịn, chỉn chu, nâng tầm phong cách cho những dịp thực sự đặc biệt."
@@ -146,42 +142,36 @@
     "categories": [
       {
         "name": "CAL-01 - Pétale",
-        "color": "#C96B7A",
         "image": "assets/brand_3/images/cal1.png",
         "desc": "Gentle and clear, opening a peaceful new day.",
         "detail": "Peony unfolds softly in a patch of early sunlight, blended with juicy pear and soothing warm vanilla. A light, shy veil of scent, like the calm of greeting a new day."
       },
       {
         "name": "CAL-02 - Soleil",
-        "color": "#F5A65B",
         "image": "assets/brand_3/images/cal2.jpg",
         "desc": "Bright and radiant, a boost of energy for school and work days.",
         "detail": "Orange blossom and mandarin burst with vitality, bringing a feeling of excitement and freshness. Perfect to accompany you to school, to work, or around the lively city."
       },
       {
         "name": "CAL-03 - Rouge",
-        "color": "#C96B7A",
         "image": "assets/brand_3/images/cal3.jpg",
         "desc": "Feminine and graceful, leaving a lingering charm on date nights.",
         "detail": "Ripe cherry wraps around an exquisite rose over a deep, warm amber base. A tender, elegant trail, enough for the one across from you to remember that grace for a long time."
       },
       {
         "name": "CAL-04 - Minuit",
-        "color": "#7A6A9C",
         "image": "assets/brand_3/images/cal4.jpg",
         "desc": "Alluring, pure, luxurious and captivating.",
         "detail": "Softly ripened fig meets refined iris, giving off a proud allure that stays luxurious and pure. The closer you come, the more elegant and hard to look away from it feels."
       },
       {
         "name": "SET-01 - Cute Mini",
-        "color": "#C96B7A",
         "image": "assets/brand_3/images/set1.jpg",
         "desc": "Sweet, cute and full of clarity. A soul-soothing gift for peaceful, gently sunny days.",
         "detail": "A charming gift box made with meticulous care, with the clear Pétale scent, a tiny dried flower sprig and a handwritten letter carrying gentle feelings. A sweet choice to double her cuteness and bring her a touch of calm."
       },
       {
         "name": "SET-02 - Elegance",
-        "color": "#7A6A9C",
         "image": "assets/brand_3/images/set2.jpg",
         "desc": "A masterpiece of luxury gifting: refined, proud, wrapping sincere feelings in every dried flower stem and treasured handwritten note.",
         "detail": "A refined pairing of the alluring Minuit scent, an artful bunch of lasting dried flowers and a heartfelt handwritten letter. The box is luxuriously and neatly designed, elevating the style of truly special occasions."
