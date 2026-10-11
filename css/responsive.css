@@ -174,3 +174,38 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
+@media (max-width: 600px) {
+    .brand-sticker {
+        left: 12px;
+        bottom: 14px;
+        gap: 5px;@media (max-width: 600px) {
+    .brand-sticker {
+        left: 12px;
+        bottom: 14px;
+        gap: 5px;
+        padding: 5px 12px 5px 6px;
+        min-height: 66px;
+    }
+
+    .brand-sticker img {
+        width: 58px;
+        height: 58px;
+    }
+
+    .sticker-message {
+        font-size: 12px;
+    }
+}
+        padding: 5px 12px 5px 6px;
+        min-height: 66px;
+    }
+
+    .brand-sticker img {
+        width: 58px;
+        height: 58px;
+    }
+
+    .sticker-message {
+        font-size: 12px;
+    }
+}
