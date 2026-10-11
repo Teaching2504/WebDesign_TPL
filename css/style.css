@@ -862,3 +862,45 @@ body.brand-punevie .story-desc {
 .demo-switcher-bar a {
     font-weight: 700 !important;
 }
+
+#hero .hero-combined-image-wrap {
+    animation: heroImgIn 1.2s ease-out both;
+}
+
+#hero .hero-combined-actions {
+    animation: revealUp 0.8s ease-out 0.6s both;
+}
+
+@keyframes heroImgIn {
+    from { opacity: 0; transform: scale(1.06); }
+    to   { opacity: 1; transform: scale(1); }
+}
+
+.reveal {
+    opacity: 0;
+}
+
+.reveal.show {
+    opacity: 1;
+    animation: revealUp 0.8s ease-out backwards;
+    animation-delay: var(--d, 0s);
+}
+
+@keyframes revealUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.ba-card:nth-child(2),
+.footer-col:nth-child(2) {
+    --d: 0.15s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; }
+    .reveal.show,
+    #hero .hero-combined-image-wrap,
+    #hero .hero-combined-actions {
+        animation: none;
+    }
+}
