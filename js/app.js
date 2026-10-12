@@ -469,8 +469,130 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             darkBtn.textContent =
                 nextTheme === "dark" ? "☀️" : "🌙";
+
+        });
+
+    }
+
+
+    const brandSticker = document.getElementById("brandSticker");
+    const brandPickerModal = document.getElementById("brandPickerModal");
+    const brandPickerClose = document.getElementById("brandPickerClose");
+    const brandPickerOverlay = document.getElementById("brandPickerOverlay");
+    const brandPickerGrid = document.getElementById("brandPickerGrid");
+
+    const brandPresets = [
+        {
+            file: "site.config.json",
+            name: "TPL - The Pretty Life"
+        },
+        {
+            file: "punevie.config.json",
+            name: "Punévie"
+        },
+        {
+            file: "lcale.config.json",
+            name: "L'Cale Perfume"
+        }
+    ];
+
+    function openBrandPicker() {
+        if (!brandPickerModal) return;
+
+        renderBrandPickerCards();
+
+        brandPickerModal.classList.add("active");
+        brandPickerModal.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+    }
+
+    function closeBrandPicker() {
+        if (!brandPickerModal) return;
+
+        brandPickerModal.classList.remove("active");
+        brandPickerModal.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+    }
+
+    function renderBrandPickerCards() {
+        if (!brandPickerGrid) return;
+
+        brandPickerGrid.replaceChildren();
+
+        const select = document.getElementById("configPresetSelect");
+        const currentPreset = select?.value || "site.config.json";
+
+        brandPresets.forEach((brand) => {
+            const card = document.createElement("button");
+            card.type = "button";
+            card.className = "brand-picker-card";
+
+            const title = document.createElement("h3");
+            title.textContent = brand.name;
+
+            const description = document.createElement("p");
+            description.textContent = "Nhấn để xem giao diện";
+
+            card.append(title, description);
+
+            if (currentPreset === brand.file) {
+                card.classList.add("selected");
+
+                const status = document.createElement("span");
+                status.className = "brand-picker-status";
+                status.textContent = "Đang xem";
+
+                card.appendChild(status);
+            }
+
+            card.addEventListener("click", async () => {
+                if (select) select.value = brand.file;
+
+                await switchTheme(brand.file);
+
+                renderBrandPickerCards();
+                closeBrandPicker();
+            });
+
+            brandPickerGrid.appendChild(card);
         });
     }
+
+
+    if (brandSticker) {
+        brandSticker.addEventListener("click", openBrandPicker);
+    }
+
+
+    if (brandPickerClose) {
+        brandPickerClose.addEventListener("click", closeBrandPicker);
+    }
+
+    if (brandPickerOverlay) {
+        brandPickerOverlay.addEventListener("click", closeBrandPicker);
+    }
+
+    document.querySelectorAll("[data-picker-theme]").forEach((button) => {
+        button.addEventListener("click", () => {
+            const theme = button.getAttribute("data-picker-theme");
+
+            if (theme !== "light" && theme !== "dark") return;
+
+            document.documentElement.setAttribute("data-theme", theme);
+            localStorage.setItem("app_theme", theme);
+
+            if (darkBtn) {
+                darkBtn.textContent = theme === "dark" ? "☀️" : "🌙";
+            }
+        });
+    });
+
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+            closeBrandPicker();
+        }
+    });
 
     await initApp();
     initReveal();
