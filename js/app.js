@@ -3,6 +3,31 @@ let baseConfig = null;
 let activeConfig = null;
 let currentLang = "vi";
 
+//
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            revealObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.15 });
+
+function observeReveal() {
+    document
+        .querySelectorAll(".reveal:not(.show)")
+        .forEach((el) => revealObserver.observe(el));
+}
+
+function initReveal() {
+    document
+        .querySelectorAll(".story-card, .section-header, .ba-card, .footer-col")
+        .forEach((el) => el.classList.add("reveal"));
+
+    observeReveal();
+}
+//
+
 function loadCSS(href) {
     return new Promise((resolve) => {
         if (document.querySelector(`link[href="${href}"]`)) {
@@ -242,6 +267,8 @@ function renderCategories(categories, customColors) {
 
         const card = document.createElement("div");
         card.className = "category-card";
+        card.classList.add("reveal");
+        card.style.setProperty("--d", `${(index % 3) * 0.12}s`);
 
         const image = document.createElement("img");
         image.className = "cat-image";
@@ -273,6 +300,8 @@ function renderCategories(categories, customColors) {
         card.append(image, pill, title, desc, detailBtn);
         container.appendChild(card);
     });
+
+    observeReveal();
 }
 
 function openProductModal(product) {
@@ -566,6 +595,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
 
     await initApp();
+    initReveal();
 
     const select = document.getElementById("configPresetSelect");
 
